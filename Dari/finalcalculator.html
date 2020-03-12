@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>calcularor</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../CSS/styleDP.css">
+    <link rel="stylesheet" href="../CSS/Hex-Calculator.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <!-- nav -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-align-justify"></i>
+        </label>
+        <label class="logo"><a class="logo-a" href="HOMED.html">CALCULATOR</a></label>
+        <ul id="home">
+            <li><a class="nava" href="HOMED.html">صفحه اصلی </a></li>
+            <li><a class="active nava" href="finalcalculator.html">ماشین حساب</a></li>
+            <li><a class="nava" href="aboutusD.html">درباره ما</a></li>
+        </ul>
+    </nav>
+    <!-- /nav -->
+    <div class="dashpord">
+        <!-- page location -->
+        <p class="position" dir="rtl">
+            <span> <b>  صفحه اصلی  /  ما شین حساب     </b> </span>
+        </p>
+        <!-- /page location -->
+        <!-- web language -->
+        <p class="language">
+            <span><b><a href="../English/finalcalculator.html" class="h2po">English /</a></b></span>
+            <span><b><a href="../Pashto/finalcalculator.html" class="h2po">پښتو </a></b></span>
+        </p>
+        <!-- /web languge -->
+    </div>
+
+    <!-- continar -->
+    <div class="continar" style="direction:rtl;">
+        <!-- body -->
+        <!-- selection of system -->
+        <div class="select">
+            <div class="new">
+                <!-- calculator -->
+                <div class="calculator1">
+                    <div class="all">
+                        <div class="main">
+                            <div class="sub">
+                                <h4>تبدیل سیستم از دسیمل </h4>
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(1)" name="u" id="" checked>
+                                    <label for="a">به باینری  </label>
+                                </div>
+                                <!-- <br> -->
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(2)" name="u" id="">
+                                    <label for="b"> به  اوکتال </label>
+                                </div>
+                                <!-- <br> -->
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(3)" name="u" id="">
+                                    <label for="c">به هگزادسیمل </label>
+                                </div>
+                            </div>
+                            <!-- /decimal -->
+                            <!-- binary -->
+                            <div class="sub">
+                                <h4>تبدیل سیستم از باینری </h4>
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(4)" name="u" id="">
+                                    <label for="u">به دسیمل  </label>
+                                </div>
+                                <!-- <br> -->
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(5)" name="u" id="">
+                                    <label for="u"> به اوکتال </label>
+                                </div>
+                                <!-- <br> -->
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(6)" name="u" id="">
+                                    <label for="u"> به هگزادسیمل  </label>
+                                </div>
+                            </div>
+                            <!-- /binary -->
+                            <!-- octal -->
+                            <div class="sub">
+                                <h4>تبدیل سیستم از اوکتال </h4>
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(7)" name="u" id="">
+                                    <label for="u">به دسیمل </label>
+                                </div>
+                                <!-- <br> -->
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(8)" name="u" id="">
+                                    <label for="u"> به باینری </label>
+                                </div>
+                                <!-- <br> -->
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(9)" name="u" id="">
+                                    <label for="u"> به  هگزادسیمل </label>
+                                </div>
+                            </div>
+                            <!-- /octal -->
+                            <!-- hexadecimal -->
+                            <div class="sub">
+                                <h4>از سیستم هگزا دسیمل </h4>
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(10)" name="u" id="">
+                                    <label for="u">به دسیمل  </label>
+                                </div>
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(11)" name="u" id="">
+                                    <label for="u">به باینری  </label>
+                                </div>
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(12)" name="u" id="">
+                                    <label for="u">به اوکنال </label>
+                                    <br>
+                                </div>
+
+                            </div>
+                            <!-- /hexadecimal -->
+                        </div>
+                    </div>
+                </div>
+                <!-- calculator -->
+                <div class="calculator">
+                    <form name="form">
+                        <input id="textBox" class="textview" name="textview" disabled style="direction:ltr;">
+                    </form>
+                    <table class="table">
+                        <!-- octal and decimal buttons -->
+                        <tr class="dec">
+                            <td>
+                                <button class="button" type="button" value="0" onclick="insert(0)">0</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="1" onclick="insert(1)">1</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="2" onclick="insert(2)">2</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="3" onclick="insert(3)">3</button>
+                            </td>
+                        </tr>
+                        <tr class="dec">
+                            <td>
+                                <button class="button" type="button" value="7" onclick="insert(7)">7</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="6" onclick="insert(6)">6</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="5" onclick="insert(5)">5</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="4" onclick="insert(4)">4</button>
+                            </td>
+                        </tr>
+                        <tr class="dec dec1">
+                            <td colspan="1">
+                                <button class="button" type="button" value="8" onclick="insert(8)">8</button>
+                            </td>
+                            <td colspan="1">
+                                <button class="button" type="button" value="9" onclick="insert(9)">9</button>
+                            </td>
+                        </tr>
+                        <tr class="dec dec2">
+                            <td colspan="1">
+                                <button class="button " type="button" value="convert" onclick="resultl()">CONVERT </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="convert" onclick="clear1()">clear </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="convert" onclick="clearAll()">clear all </button>
+                            </td>
+                        </tr>
+
+                        <!-- /octal and decimal buttons  -->
+                        <!-- binary bttons -->
+                        <tr class="bin bin1">
+                            <td colspan="2">
+                                <button class="button " type="button" value="0" onclick="insert(0)">0</button>
+                            </td>
+                            <td colspan="2">
+                                <button class="button" type="button" value="1" onclick="insert(1)">1</button></td>
+                        </tr>
+                        <tr class="bin bin2">
+                            <td>
+                                <button class="button " type="button" value="convert" onclick="resultl()">CONVERT </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="convert" onclick="clear1()">clear </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="convert" onclick="clearAll()">clear all </button>
+                            </td>
+                        </tr>
+                        <!-- /binary buttons -->
+                        <!-- hexadecimal buttons -->
+                        <tr class="hex">
+                            <td>
+                                <button class="button" type="button" value="A" onclick="insert('A')">A</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="B" onclick="insert('B')">B</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="C" onclick="insert('C')">C</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="D" onclick="insert('D')">D</button>
+                            </td>
+                        </tr>
+                        <tr class="hex">
+                            <td>
+                                <button class="button" type="button" value="7" onclick="insert('E')"> E </button>
+                            </td>
+                            <td>
+                                <button class="button" value="8" onclick="insert('F')">F </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="9" onclick="insert(0)">  0 </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="E" onclick="insert('E')"> 1</button>
+                            </td>
+                        </tr>
+                        <tr class="hex">
+                            <td>
+                                <button class="button" type="button" value="4" onclick="insert(5)"> 5 </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="5" onclick="insert(4)"> 4</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="6" onclick="insert(3)"> 3</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="F" onclick="insert(2)"> 2</button>
+                            </td>
+                        </tr>
+
+                        <tr class="hex">
+                            <td>
+                                <button class="button" type="button" value="1" onclick="insert(6)"> 6 </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="2" onclick="insert(7)"> 7</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="3" onclick="insert(8)"> 8</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="0" onclick="insert(9)"> 9</button>
+                            </td>
+                        </tr>
+                        <tr class="hex hex1">
+                            <td>
+                                <button class="button " type="button" value="convert" onclick="resultl()">CONVERT </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="convert" onclick="clear1()">clear </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="convert" onclick="clearAll()">clear all </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /calculator -->
+            </div>
+            <!-- /calculator -->
+            <p class="instruction">دستور العمل ها </p>
+            <div class="middle">
+                <div class="me">
+                    <!-- Decimal to binary instruction -->
+
+                    <li class="item" id="db">
+                        <a href="#db" class="btn">تبدیل سیستم دسیمل به باینری  </a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> تبدیل سیستم دسیمل به باینری : </h3>
+                                <b><h4 class="h4main">سیستم دسیمل ( اعشاری):  </h4>
+                                <p class="pmain">از این سیستم که در زندگی روز مره  نیز مورد استفاده می باشد . هر عدد ترکیبی از ارقام { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9} میباشد .
+                              </p>
+                              <p class="pmain"> مثال : اعداد 2001 و 50879 نمونه هایی از سیستم اعشاری هستند . </p>
+                              <h4 class="h4main"> سیستم باینری : </h4>
+                              <p class="pmain">
+                              در این سیستم هر عدد ترکیبی از ارقام { 0 ,1} می باشند که منحیث زبان کمپیوتر  استفاده میشود .
+                               </p>
+                              <p class="pmain"> مثال : اعداد 1101  و  10011 نمونه های از سیستم باینری هستند . </p>
+                              <h4 class="h4main"> تبدیل اعداد از سیستم دیسمل به سیستم باینری :</h4>
+                              <p class="pmain">برای تبدیل نمودن یک عدد از سیستم دیسمل (قاعده 10) به یک عدد در سیستم باینری (قاعده2) از روش تقسیم متوالی استفاده می نمائیم.
+                                طوریکه در این روش مقسوم علیه همان قاعده یعنی 2 و مقسوم همان عدد دلخواه در سیستم دیسمل است که میخواهیم به سیستم باینری تبدیل کنیم.
+
+                             <br>
+                            روش  کار :<br>
+                            ابتدا عدد مورد نظر را تقسیم 2 نموده و باقی مانده را اخذ می کنیم.
+                            عملیه فوق را تا زمانی ادامه می دهیم که خارج قسمت از مقسوم علیه کوچکتر شود .
+                            و در پایان کار زمانی که خارج قسمت کوچکتر از مقسوم علیه شد ,
+                            در این حالت آخرین خارج قسمت را گرفته و به تعقیب آن تمام باقی مانده ها از عملیه های تقسیم قبلی را به ترتیب از انتها تا به ابتدا از چپ به راست پهلوی هم می نویسیم .
+                            عدد بدست آمده عدد در سیستم باینری(قاعده 2) می باشد.
+
+                           </p>
+                            <p class="pmain">مثال : عدد 13 را از مبنای ده به مبنای دو  تبدیل کنید ؟</p>
+                            <p class="pimg"> <img src="../img/DBEx.png" class="mainimg"></p>
+
+                          </b>
+                            </div>
+                    </li>
+                    <!-- /Db -->
+                    <!-- do -->
+                    <li class="item" id="do">
+                        <a href="#do" class="btn">تبدیل سیستم دسیمل به اوکتال  </a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> تبدیلی اعداد از سیستم اسیستم دسیمل به اکتال :</h3>
+                                <b> <h4 class="h4main">سیستم دسیمل ( اعشاری):  </h4>
+                                <p class="pmain">از این سیستم که در زندگی روز مره  نیز مورد استفاده می باشد . هر عدد ترکیبی از ارقام { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9} میباشد .
+                                </p>
+                                 <p class="pmain"> مثال : اعداد 2001 و 50879 نمونه هایی از سیستم اعشاری هستند . </p>
+                                 <h4 class="h4main">سیستم اکتال : </h4>
+                                 <p class="pmain">در این سیستم هر عدد  ترکیبی از ارقام  { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7} می باشد . </p>
+                                 <p class="pmain"> مثال : اعداد  466  و 731 نمونه هایی از سیستم اکتال و یا هشتی است . </p>
+
+
+
+
+                                 <h4 class="h4main"> تبدیلی اعداد از سیستم اسیستم دسیمل   به اکتال :</h4>
+                                 <p class="pmain">برای تبدیل نمودن یک عدد از سیستم دیسمل (قاعده 10) به یک عدد در سیستم اکتال (قاعده ۸) از روش تقسیم متوالی استفاده می نمائیم.
+                                طوریکه در این روش مقسوم علیه همان قاعده یعنی ۸ و مقسوم همان عدد دلخواه در سیستم دیسمل است که میخواهیم به سیستم اکتال تبدیل کنیم.
+                                 <p class="pmain">  روش کار : </p>
+                                <p class="pmain">  ابتدا عدد مورد نظر را تقسیم ۸ نموده و باقی مانده را اخذ می کنیم.
+                                عملیه فوق را تا زمانی ادامه می دهیم که خارج قسمت از مقسوم علیه کوچکتر شود .
+                                و در پایان کار زمانی که خارج قسمت کوچکتر از مقسوم علیه شد ,
+                                در این حالت آخرین خارج قسمت را گرفته و به تعقیب آن تمام باقی مانده ها از عملیه های تقسیم قبلی را به ترتیب از انتها تا به ابتدا از چپ به راست پهلوی هم می نویسیم .
+                                عدد بدست آمده عدد در سیستم اکتال (قاعده ۸ ) می باشد.
+                             </p>
+                                <br>
+                                 </p>
+                                  <p class="pmain">  مثال :  8( ? ) = 10 ( 7562 ) </p>
+                                  <p class="pimg"> <img src="../img/DOEx.png" class="mainimg"></p>
+                              </b>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /do -->
+                    <!-- dh -->
+                    <li class="item" id="dh">
+                        <a href="#dh" class="btn">تبدیل سیستم دسیمل به هگزا دسیمل </a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> تبدیل اعداد از سیستم دیسمل به سیستم هگزا دسیمل : </h3>
+                                <b> <h4 class="h4main"> سیستم دسیمل ( اعشاری): </h4>
+                                    <p class="pmain">داز این سیستم که در زندگی روز مره  نیز مورد استفاده می باشد . هر عدد ترکیبی از ارقام { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9} میباشد .
+                                  </p>
+                                  <p class="pmain"> مثال : اعداد 2001 و 50879 نمونه هایی از سیستم اعشاری هستند . </p>
+
+                                  <h4 class="h4main"> سیستم هگزا دسیمل :</h4>
+                                  <p class="pmain"> در این سیستم هر عدد ترکیبی از ارقام و نماد های
+                                    { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7, 8 , 9 , A , B , C , D , E , F } می باشد .
+                                    توجه داشته باشید که نماد های  A , B , C , D , E , F معادله اعداد  10,11,12,13,14  درمبنای  ده می باشند .
+                                     </p>
+
+                                  <p class="pmain">مثال : اعداد ۳۳ و AEF  نمونه های از اعدا در مبنا شانزده میباشد . </p>
+                                  <h4 class="h4main">عبدیل اعداد از سیستم دیسمل به سیستم هگزا دسیمل  : </h4>
+                                  <p class="pmain">برای تبدیل نمودن یک عدد از سیستم دیسمل (قاعده 10) به یک عدد در سیستم هگزا دسیمل (قاعده ۱۶) از روش تقسیم متوالی استفاده می نمائیم.
+                                    طوریکه در این روش مقسوم علیه همان قاعده یعنی ۱۶ و مقسوم همان عدد دلخواه در سیستم دیسمل است که میخواهیم به سیستم هگزا دسیمل تبدیل کنیم.
+
+                                 <br>
+                                روش کار :<br>
+                                ابتدا عدد مورد نظر را تقسیم ۱۶ نموده و باقی مانده را اخذ می کنیم.
+                                عملیه فوق را تا زمانی ادامه می دهیم که خارج قسمت از مقسوم علیه کوچکتر شود .
+                                و در پایان کار زمانی که خارج قسمت کوچکتر از مقسوم علیه شد ,
+                                در این حالت آخرین خارج قسمت را گرفته و به تعقیب آن تمام باقی مانده ها از عملیه های تقسیم قبلی را به ترتیب از انتها تا به ابتدا از چپ به راست پهلوی هم می نویسیم .
+                                عدد بدست آمده عدد در سیستم هگزا دسیمل  (قاعده ۱۶ ) می باشد.
+
+                               </p>
+                                <p class="pmain">  مثال :  10 ( ? )  =    16( 108 ) </p>
+
+                              </b>
+                            </div>
+
+                            <div class="body">
+                                <b>
+                                        <p class="pimg"> 108 / 16   =  12 &nbsp; &nbsp; &nbsp; &nbsp;= C</p>
+                                        <p class="pimg">( 108 ) 16   =  10 ( 6C ) &nbsp;&nbsp;&nbsp;</p>
+                                    </b>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- dh -->
+                    <!-- bd -->
+                    <li class="item" id="bd">
+                        <a href="#bd" class="btn">تبدیل سیستم باینری به دسیمل    </a>
+                        <div class="sme">
+                            <!-- body -->
+                            <div class="body" style="direction:rtl;">
+                                <h3> تبدیلی اعداد از سیستم باینری به سیستم دسیمل : </h3>
+                                <h4 class="h4main"> سیستم باینری : </h4>
+                                <p class="pmain">
+                                    در این سیستم هر عدد ترکیبی از ارقام { 0 ,1} می باشند که منحیث زبان کمپیوتر استفاده میشود .
+                                </p>
+                                <p class="pmain"> مثال : اعداد 1101 و 10011 نمونه های از سیستم باینری هستند . </p>
+                                <h4 class="h4main"> سیستم دسیمل ( اعشاری): </h4>
+                                <b><p class="pmain">از این سیستم که در زندگی روز مره  نیز مورد استفاده می باشد . هر عدد ترکیبی از ارقام { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9} میباشد .
+                             </p>
+                             <p class="pmain"> مثال : اعداد 2001 و 50879 نمونه هایی از سیستم اعشاری هستند . </p>
+
+                             <h4 class="h4main"> تبدیلی اعداد از سیستم باینری به سیستم دسیمل :</h4>
+                             <p class="pmain">برای تبدیل نمودن اعداد از سیستم باینری (قاعده دو ) از روش محاسبه مجموعی ارزش مکانی ارقام عدد محاسبه می کنیم.
+                          روش مذکور طوری است که اولین رقم عدد داده شده در سیستم  باینری از طرف راست به طرف چپ  را ضرب دو  نموده طوریکه برای اولین رقم توان قاعده ضرب شده صفر باشد ضرب می کنیم بعدا برای اولین رقم از طرف چپ قاعده با توان یک ضرب می کنیم و به همین منوال پیش می رویم تا که عدد باینری مورد نظر تمام شود  بعدا تمام حاصل ضرب ها را با هم جمع نموده می نویسیم عدد بع دست آمده در سیستم دسیمل است.
+
+                             </p>
+                              <p class="pmain">  مثال  :   10(?) = 2 (1011001 ) </p>
+                              <p class="pimg"> <img src="../img/BDEx.png" class="mainimg"></p>
+                          </b>
+                            </div>
+                            <!-- /body -->
+                        </div>
+                    </li>
+                    <!-- /bd -->
+                    <!-- bo -->
+                    <li class="item" id="bo">
+                        <a href="#bo" class="btn">تبدیل سیستم باینری به اوکتال </a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> تبدیل سیستم باینری به اوکتال : </h3>
+                                <b> <h4 class="h4main"> سیستم باینری : </h4>
+                                 <p class="pmain">
+                                در این سیستم هر عدد ترکیبی از ارقام { 0 ,1} می باشند که منحیث زبان کمپیوتر  استفاده میشود .
+                                .</p>
+                                 <p class="pmain"> مثال : اعداد 1101  و  10011 نمونه های از سیستم باینری هستند . </p>
+                                 <h4 class="h4main">سیستم اکتال : </h4>
+                                 <p class="pmain">در این سیستم هر عدد  ترکیبی از ارقام  { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7} می باشد . </p>
+                                 <p class="pmain"> مثال : اعداد  466  و 731 نمونه هایی از سیستم اکتال و یا هشتی است . </p>
+                                 <h4 class="h4main">سیستم دسیمل ( اعشاری):  </h4>
+                                <p class="pmain">از این سیستم که در زندگی روز مره  نیز مورد استفاده می باشد . هر عدد ترکیبی از ارقام { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9} میباشد .
+                              </p>
+                              <p class="pmain"> مثال : اعداد 2001 و 50879 نمونه هایی از سیستم اعشاری هستند . </p>
+
+                              <h4 class="h4main"> تبدیل اعداد از سیستم باینری به سیستم اکتال :</h4>
+                              <p class="pmain">برای تبدیل نمودن عدد از سیستم باینری(قاعده 2) به سیستم اکتال (قاعده 8)
+                                نخست عدد باینری مورد نظر را به عدد در سیستم دیسمل (قاعده 10) تبدیل نموده
+                                که این روش تبدیلی همان روش در نظر گرفتن ارزش مکانی عدد نظر به توان که توان همانا قاعده ما می باشد.
+                                و بعداً مجموعه آن ها عدد در سیستم جدید است (قاعده 10).
+                                و بعداً عدد جدید که در سیستم دیسمل (قاعده10) است با استفاده از روش تقسیم متوالی به عدد 8 عدد دیسمل خود را به عدد اکتال تبدیل میکنیم.
+                            اما علاوه بر طریقه فوق طریقه دیگری نیز برای تبدیلی مستقیم عدد از  سیستم باینری به سیستم اکتال وجود دارد.
+                            طریقه مذکور طوری است که عدد باینری خود را از طرف راست به طرف چپ سه سه بیت جدا نموده وهر سه بیت را با یک رقم  در سیستم اکتال تعویض نموده ارقام تعویض شده را از چپ بهراست می نویسیم .
+                            عدد به دست آمده در سیستم اکتال است .
+                            </p>
+                            <p class="pmain">نوت :   </p>
+                            <p class="pmain">برای این که تقسیم بندی عدد باینری به سه سه بیت صورت کامل بیاید در صورت کمبود می توانیم از صفر ها برای کامل نمودن سه بیت استفاده نمایم .      </p>
+                            <p class="pmain">مثال : 10  ( ? ) = 2( 10111 ) </p>
+
+
+                               </b>
+                            </div>
+                            <div class="body ">
+                                <div class="BOExl">
+                                    <b>
+                                    <p class="pmain"> ( 10111 )2 = ( ? )8 &nbsp;&nbsp;  </p>
+                                    <p class="pmain">  010   =  2 &nbsp; </p>
+                                    <p class="pmain"> 111  =  7 &nbsp;</p>
+                                    <p class="pmain"> 8  ( 27 ) = 2( 10111 ) </p>
+                                    <p class="pimg"> </p>
+                                </b>
+                                </div class="BOExr">
+                                <div>
+                                    <b>
+                                    <p class="pimg"><img src="../img/BOEx.png" class="mainimg"></p>
+                                </b>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /bo -->
+                    <!-- bh -->
+                    <li class="item" id="bh">
+                        <a href="#bh" class="btn">تبدیل سیستم باینری به هگزادسیمل  </a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> تبدیل اعداد از سیستم باینری به سیستم هگزادسیمل : </h3>
+                                <b> <h4 class="h4main"> سیستم باینری : </h4>
+                                     <p class="pmain">
+                                      در این سیستم هر عدد ترکیبی از ارقام { 0 ,1} می باشند که منحیث زبان کمپیوتر  استفاده میشود .
+                                      </p>
+                                     <p class="pmain"> مثال : اعداد 1101  و  10011 نمونه های از سیستم باینری هستند . </p>
+                                     <h4 class="h4main">سسیستم هگزا دسیمل : </h4>
+                                     <p class="pmain">در این سیستم هر عدد ترکیبی از ارقام و نماد های
+                                     { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7, 8 , 9 , A , B , C , D , E , F } می باشد .
+                                        توجه داشته باشید که نماد های  A , B , C , D , E , F معادله اعداد  10,11,12,13,14  درمبنای  ده می باشند .
+                                     </p>
+                                     <p class="pmain"> مثال : اعداد ۳۳ و AEF نمونه  هایی از اعداد  در  مبنا شانزده می باشند . </p>
+                                     <h4 class="h4main">سیستم دسیمل ( اعشاری):  </h4>
+                                    <p class="pmain">از این سیستم که در زندگی روز مره  نیز مورد استفاده می باشد . هر عدد ترکیبی از ارقام { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9} میباشد .
+                                  </p>
+                                  <p class="pmain"> مثال : اعداد 2001 و 50879 نمونه هایی از سیستم اعشاری هستند . </p>
+
+                                  <h4 class="h4main"> تبدیل اعداد از سیستم باینری به سیستم هگزادسیمل :</h4>
+                                  <p class="pmain">برای تبدیل نمودن عدد از سیستم باینری(قاعده 2) به سیستم هگزادسیمل  (قاعده ۱۶)
+                                    نخست عدد باینری مورد نظر را به عدد در سیستم دیسمل (قاعده 10) تبدیل نموده
+                                    که این روش تبدیلی همان روش در نظر گرفتن ارزش مکانی عدد نظر به توان که توان همانا قاعده ما می باشد.
+                                    و بعداً مجموعه آن ها عدد در سیستم جدید است (قاعده 10).
+                                    و بعداً عدد جدید که در سیستم دیسمل (قاعده10) است با استفاده از روش تقسیم متوالی به عدد ۱۶ عدد دیسمل خود را به عدد هگزادسیمل  تبدیل میکنیم.
+                                    اما علاوه بر طریقه فوق طریقه دیگری نیز برای تبدیلی مستقیم عدد از  سیستم باینری به سیستم هگزادسیمل وجود دارد.
+                                    طریقه مذکور طوری است که عدد باینری خود را از طرف راست به طرف چپ چهار چهار بیت جدا نموده وهر چهار بیت را با یک رقم  در سیستم هگزا دسیمل  تعویض نموده ارقام تعویض شده را از چپ به راست می نویسیم .
+                                    عدد به دست آمده در سیستم هگزادسیمل است .
+
+                                </p>
+                                <p class="pmain">نوت :   </p>
+                                <p class="pmain"> برای این که تقسیم بندی عدد باینری به چهار جهار بیت صورت کامل بیاید در صورت کمبود می توانیم از صفر ها برای کامل نمودن چهار بیت استفاده نمایم      </p>
+                                <p class="pmain">مثال :  16( ? )  =2 ( 111001110001 ) </p>
+
+
+                                   </b>
+                            </div>
+                            <div class="body " style="direction: ltr;">
+
+                                <b>
+                                        <p class="pmain"> ( 111001110001 )2 = ( ? )16 &nbsp;&nbsp;  </p>
+                                        <p class="pmain">  0001   =  1 &nbsp; </p>
+                                        <p class="pmain"> 0111  =  7 &nbsp;</p>
+                                        <p class="pmain"> 1110  =  14 = E &nbsp;</p>
+                                        <p class="pmain"> ( 111001110001 ) 2  =   ( E71 ) 16</p>
+                                        <p class="pimg"> </p>
+                                    </b>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /bh -->
+                    <!-- od -->
+                    <li class="item" id="od">
+                        <a href="#od" class="btn">تبدیل سیستم اوکتال به دسیمل </a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> تبدیل اعداد از سیستم اوکتال به سیستم دسیمل : </h3>
+                                <b> <h4 class="h4main">سیستم اکتال : </h4>
+                                 <p class="pmain">در این سیستم هر عدد  ترکیبی از ارقام  { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7} می باشد . </p>
+                                 <p class="pmain"> مثال : اعداد  466  و 731 نمونه هایی از سیستم اکتال و یا هشتی است . </p>
+                                 <h4 class="h4main">سیستم دسیمل ( اعشاری):  </h4>
+                                <p class="pmain">از این سیستم که در زندگی روز مره  نیز مورد استفاده می باشد . هر عدد ترکیبی از ارقام { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9} میباشد .
+                                </p>
+                                 <p class="pmain"> مثال : اعداد 2001 و 50879 نمونه هایی از سیستم اعشاری هستند . </p>
+
+
+                                 <h4 class="h4main">  تبدیل اعداد از سیستم اوکتال به سیستم دسیمل :</h4>
+                                 <p class="pmain">
+                                برای تبدیل نمودن اعداد از سیستم اوکتال  (قاعده هشت ) از روش محاسبه مجموعی ارزش مکانی ارقام عدد محاسبه می کنیم.
+                                روش مذکور طوری است که اولین رقم عدد داده شده در سیستم  اوکتال از طرف راست به طرف چپ  را ضرب هشت نموده طوریکه برای اولین رقم توان قاعده ضرب شده صفر باشد ضرب می کنیم بعدا برای اولین رقم از طرف چپ قاعده با توان یک ضرب می کنیم و به همین منوال پیش می رویم تا زمان که عدد اکتال مورد نظر تمام شود  بعدا تمام حاصل ضرب ها را با هم جمع نموده می نویسیم عدد به دست آمده در سیستم دسیمل است.
+
+                                 </p>
+                                  <p class="pmain">  مثال :  10 ( ? ) =  8( 300 ) </p>
+                                  <p class="pimg"> <img src="../img/ODEx.png" class="mainimg"></p>
+                              </b>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /od -->
+                    <!-- ob -->
+                    <li class="item" id="ob">
+                        <a href="#ob" class="btn">تبدیل سیستم اوکتال به باینری</a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> تبدیل اعداد ازسیستم اکتال به سیستم باینری : </h3>
+                                <b>
+                                 <h4 class="h4main">سیستم اکتال : </h4>
+                                 <p class="pmain">در این سیستم هر عدد  ترکیبی از ارقام  { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7} می باشد . </p>
+                                 <p class="pmain"> مثال : اعداد  466  و 731 نمونه هایی از سیستم اکتال و یا هشتی است . </p>
+                                  <h4 class="h4main"> سیستم باینری : </h4>
+                                 <p class="pmain">
+                                در این سیستم هر عدد ترکیبی از ارقام { 0 ,1} می باشند که منحیث زبان کمپیوتر  استفاده میشود .
+                                </p>
+                                 <p class="pmain"> مثال : اعداد 1101  و  10011 نمونه های از سیستم باینری هستند . </p>
+                                 <p class="pmain"> مثال : اعداد ۳۳ و AEF نمونه  هایی از اعداد  در  مبنا شانزده می باشند . </p>
+                                 <h4 class="h4main">سیستم دسیمل ( اعشاری):  </h4>
+                                <p class="pmain">از این سیستم که در زندگی روز مره  نیز مورد استفاده می باشد . هر عدد ترکیبی از ارقام { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9} میباشد .
+                              </p>
+                              <p class="pmain"> مثال : اعداد 2001 و 50879 نمونه هایی از سیستم اعشاری هستند . </p>
+
+                              <h4 class="h4main"> تبدیل اعداد ازسیستم اکتال به سیستم باینری :</h4>
+                              <p class="pmain">برای تبدیل نمودن عدد از سیستم اوکتال  به سیستم باینری ابتدا عدد مورد نظر خود  را به سیستم دسیمل توسط همان روش  در نظر گرفتن مجموعه  ارزش مکانی عدد نظر به قاعده و  بعدا جمع آن تبدیل نموده و بعدا عدد دسیمل را توسط  روش تقسیم متوالی بر مبنا اوکتال تبدیل می کنیم
+
+                            </p>
+                            <p class="pmain">اماعلاوه برآن طریقه دیگری نیز وجود دارد :  </p>
+                            <p class="pmain"> طریقه مذکور طوری است که هر رقم عدد درسیستم اکتال را به  سه  بیت معادل آن از طرف چپ به راست می نویسیم
+                            عدد به دست امده در سیستم باینری ( قاعده ۲ ) است
+
+                           </p>
+                            <p class="pmain">مثال : 2  ( ? ) = 8( 765 ) </p>
+
+
+                               </b>
+                            </div>
+                            <div class="body " style="direction: ltr;">
+
+                                <b>
+                                    <p class="pmain"> ( 765 )8 = ( ? )2 &nbsp; </p>
+                                    <p class="pmain">  7  =  (111)2 &nbsp; </p>
+                                    <p class="pmain"> 6  =  (110)2   &nbsp; </p>
+                                    <p class="pmain"> 5  =  (101)2 &nbsp;</p>
+                                    <p class="pmain"> ( 765 ) 8  = 16  ( 111110101 )2</p>
+                                    <p class="pimg"> </p>
+                                </b>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /ob -->
+                    <!-- oh -->
+                    <li class="item" id="oh">
+                        <a href="#oh" class="btn">تبدیل سیستم اوکتال به هگزا دسیمل  </a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> تبدیل اعداد از سیستم اوکتال به هگزا دسیمل : </h3>
+                                <b> <h4 class="h4main">سیستم اکتال : </h4>
+                             <p class="pmain">در این سیستم هر عدد  ترکیبی از ارقام  { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7} می باشد . </p>
+                             <p class="pmain"> مثال : اعداد  466  و 731 نمونه هایی از سیستم اکتال و یا هشتی است . </p>
+                             <h4 class="h4main"> سیستم هگزا دسیمل :</h4>
+                          <p class="pmain"> در این سیستم هر عدد ترکیبی از ارقام و نماد های
+                            { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7, 8 , 9 , A , B , C , D , E , F } می باشد .
+                            توجه داشته باشید که نماد های  A , B , C , D , E , F معادله اعداد  10,11,12,13,14  درمبنای  ده می باشند .
+                             </p>
+
+                          <p class="pmain">مثال : اعداد ۳۳ و AEF  نمونه های از اعدا در مبنا شانزده میباشد . </p>
+
+                         <h4 class="h4main"> سیستم دسیمل ( اعشاری): </h4>
+                            <p class="pmain">داز این سیستم که در زندگی روز مره  نیز مورد استفاده می باشد . هر عدد ترکیبی از ارقام { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9} میباشد .
+                          </p>
+                          <p class="pmain"> مثال : اعداد ۲۰۰۱ و ۵۰۸۷۹نمونه هایی از سیستم اعشاری هستند . </p>
+
+                             <h4 class="h4main"> تبدیل اعداد   از سیستم اکتال به هگزادسیمل:</h4>
+                             <p class="pmain">برای تبدیل نمودن عدد از سیستم اکتال( قاعده ۸) به سیستم
+                            هگزادسیمل ( قاعده ۱۶) روش های متعدد وجود دارد که ذیلا به تشریح آن می پردازیم
+                          </p>
+
+                             <p class="pmain">  روش اول : </p>
+                             <p class="pmain"> در این روش بخاطر تبدیل نمودن اعداد اکتال به هگزادسیمل  نخست عدد اکتال  خود  را به عدد  دسیمل یعنی عدد با قاعده  ۱۰            به  مجموعه ارزش مکانی ارقام عدد محاسبه می کنیم طوریکه ارقام عدد نام برده را با توجه به موقیعت مکانی هر  عدد ضرب    توان های عدد هشت نموده و جمع می کنیم . باتوجه به این که با هر بار ازدیاد  موقیعت رقم توان مبنا اضافه می شود یعنی در رقم اول توان مبنا صفر  در  رقم دوم توان مبنا یک  و متباقی ان را نیز به همین منوال ادامه میدهیم . وبعد از ان تمامی حاصل ضرب ها را با هم  جمع نموده عدد به دست آمده در سیستم هگزادسیمل می باشد .
+                            درمرحله بعدی عدد دسیمل خود را به عدد در سیستم هگزادسیمل (قاعده ۱۶)  با استفاده از روش تقسیم متوالی بر عدد ۱۶ همان مبنا اولی میباشد تبدیل می نمایم روش کار این عملیه طور است که ابتدا عدد دسیمل خود را بر ۱۶ تقسیم  می نمایم و باقی مانده  را اخذ می کنیم بعدا عملیه فوق را تا زمانی ادامه میدهیم که خارج قسمت از مبنا  (عدد ۱۶ ) کوچک شود در آخر آخرین خارج قسمت اگر  گرفته         به تعقیب آن تمامی باقی مانده ها از عملیه تقسیم گذشته را از انتها تا به ابتدا از طرف راست به چپ می نویسیم . عدد به دست آمده عدد در سیستم هگزادسیمل (قاعده ۱۶ )می باشد
+
+
+
+                          </p>
+                           <p class="pmain">  روش دوم :   </p>
+                            <p class="pmain">  برای تبدیل نمودن عدد اکتال به عدد هگزادسیمل  عدد اکتال خود را به عدد باینری تبدیل می کنیم .
+                        روش کار طوری است که هر رقم عدد درسیستم اکتال به سه بیت معادل آن از طرف چپ به راست می نویسیم عدد به دست آمده معادل اکتال در سیستم باینری است
+                        درمرحله بعدی عدد باینری خود را با استفاده از همان روش تقسیم بندی ارقام عدد به بیت هاو تعویض آن به قیمت معادل آن در سیستم دلخواه استفاده می نمایم
+                          روش کار طوری است که ابتدا عدد باینری خود را به چهار چهار  بیت از راست به چپ تقسیم نموده و بعدا قیمت معادل هر چهار  بیت را در سیستم هگزادسیمل  ازچپ به راست می نویسیم عدد مذکور  عدد در سیستم هگزادسیمل  است .
+
+
+                          </p>
+                              <p class="pmain">  نوت : برای تکمیل نموده تقسیم بندی بیت ها در صورت کمبود می توانیم از صفر ها نیز استفاده کنیم . </p>
+
+                          </b>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /oh -->
+                    <!-- hd -->
+                    <li class="item" id="hd">
+                        <a href="#hd" class="btn">تبدیل سیستم هگزا دسیمل به دسیمل</a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> تبدیل سیستم از هگزا دسیمل به دسیمل : </h3>
+                                <b> <h4 class="h4main"> سیستم هگزا دسیمل :</h4>
+                        <p class="pmain"> در این سیستم هر عدد ترکیبی از ارقام و نماد های
+                        { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7, 8 , 9 , A , B , C , D , E , F } می باشد .
+                        توجه داشته باشید که نماد های  A , B , C , D , E , F معادله اعداد  10,11,12,13,14  درمبنای  ده می باشند .
+                         </p>
+
+                        <p class="pmain">مثال : اعداد ۳۳ و AEF  نمونه های از اعدا در مبنا شانزده میباشد . </p>
+                        <h4 class="h4main"> سیستم دسیمل ( اعشاری): </h4>
+                        <p class="pmain">داز این سیستم که در زندگی روز مره  نیز مورد استفاده می باشد . هر عدد ترکیبی از ارقام { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9} میباشد .
+                        </p>
+                       <p class="pmain"> مثال : اعداد ۲۰۰۱ و ۵۰۸۷۹ نمونه هایی از سیستم اعشاری هستند . </p>
+
+                         <h4 class="h4main"> تبدیلی اعداد از سیستم هگزادسیمل به دسیمل :</h4>
+                         <p class="pmain">برای تبدیل نمودن اعداد از سیستم ا هگزادسیمل   (قاعده شانزده ) از روش محاسبه مجموعی ارزش مکانی ارقام عدد محاسبه می کنیم.
+                        روش مذکور طوری است که اولین رقم عدد داده شده در سیستم  هگزا دسیمل از طرف راست به طرف چپ  را ضرب شانزده نموده طوریکه برای اولین رقم توان قاعده ضرب شده صفر باشد ضرب می کنیم بعدا برای اولین رقم از طرف چپ قاعده با توان یک ضرب می کنیم و به همین منوال پیش می رویم تا زمان که عدد هگزادسیمل  مورد نظر تمام شود  بعدا تمام حاصل ضرب ها را با هم جمع نموده می نویسیم عدد به دست آمده در سیستم دسیمل است.
+
+
+                         </p>
+                          <p class="pmain">  مثال  :  </p>
+                          <p class="pimg"> <img src="../img/HDEx.png" class="mainimg"></p>
+                      </b>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /hd -->
+                    <!-- hb -->
+                    <li class="item" id="hb">
+                        <a href="#hb" class="btn">تبدیل سیستم هگزاد سیمل به باینری </a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> تبدیل اعداد ازسیستم هگزا دسیمل به سیستم باینری : </h3>
+                                <b>
+                                 <h4 class="h4main">سسیستم هگزا دسیمل : </h4>
+                                 <p class="pmain">در این سیستم هر عدد ترکیبی از ارقام و نماد های
+                                 { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7, 8 , 9 , A , B , C , D , E , F } می باشد .
+                                    توجه داشته باشید که نماد های  A , B , C , D , E , F معادله اعداد  10,11,12,13,14  درمبنای  ده می باشند .
+                                 </p>
+                                   <p class="pmain">مثال : اعداد ۳۳ و AEF  نمونه های از اعدا در مبنا شانزده میباشد . </p>
+                                  <h4 class="h4main"> سیستم باینری : </h4>
+                                 <p class="pmain">
+                                در این سیستم هر عدد ترکیبی از ارقام { 0 ,1} می باشند که منحیث زبان کمپیوتر  استفاده میشود .
+                                </p>
+                                 <p class="pmain"> مثال : اعداد 1101  و  10011 نمونه های از سیستم باینری هستند . </p>
+
+                                 <h4 class="h4main">سیستم دسیمل ( اعشاری):  </h4>
+                                <p class="pmain">از این سیستم که در زندگی روز مره  نیز مورد استفاده می باشد . هر عدد ترکیبی از ارقام { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9} میباشد .
+                              </p>
+                              <p class="pmain"> مثال : اعداد ۲۰۰۱ و ۵۰۸۷۹ نمونه هایی از سیستم اعشاری هستند . </p>
+
+                              <h4 class="h4main"> تبدیل اعداد ازسیستم هگزا دسیمل به سیستم باینری :</h4>
+                              <p class="pmain">برای تبدیل نمودن عدد از سیستم هگزادسیمل به سیستم باینری ابتدا عدد مورد نظر خود  را به سیستم دسیمل توسط همان روش  در نظر گرفتن مجموعه  ارزش مکانی عدد نظر به قاعده و  بعدا جمع آن تبدیل نموده و بعدا عدد دسیمل را توسط  روش تقسیم متوالی بر مبنا هگزادسیمل تبدیل می کنیم
+
+                            </p>
+                            <p class="pmain">اماعلاوه برآن طریقه دیگری نیز وجود دارد :  </p>
+                            <p class="pmain"> طریقه مذکور طوری است که هر رقم عدد درسیستم هگزا دسیمل را به  چهار بیت معادل آن از طرف چپ به راست می نویسیم
+                            عدد به دست امده در سیستم باینری ( قاعده ۲ ) است
+                           </p>
+                            <p class="pmain">مثال : 2  ( ? ) = 16( 4A8 ) </p>
+
+
+                               </b>
+                            </div>
+                            <div class="body " style="direction: ltr;">
+
+                                <b>
+                                    <p class="pmain"> ( 4A8 )16 = ( ? )2 &nbsp;&nbsp;  </p>
+                                    <p class="pmain">  4  =  (100)2 &nbsp; = (0100)2</p>
+                                    <p class="pmain"> A  =  (10)10 =  &nbsp; (1010)2</p>
+                                    <p class="pmain"> 8  =  (1000)2 &nbsp;</p>
+                                    <p class="pmain"> ( 4A8 ) 2  = 16  ( 010010101000 )2</p>
+                                    <p class="pimg"> </p>
+                                </b>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /hb -->
+                    <!-- ho -->
+                    <li class="item" id="ho">
+                        <a href="#ho" class="btn">تبدیل سیستم هگزادسیمل به سیستم اکتال </a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> تبدیل اعداد از سیستم هگزادسیمل به سیستم اکتال : </h3>
+                                <b> <h4 class="h4main">سسیستم هگزا دسیمل : </h4>
+                            <p class="pmain">در این سیستم هر عدد ترکیبی از ارقام و نماد های
+                            { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7, 8 , 9 , A , B , C , D , E , F } می باشد .
+                               توجه داشته باشید که نماد های  A , B , C , D , E , F معادله اعداد  10,11,12,13,14  درمبنای  ده می باشند .
+                            </p>
+                              <p class="pmain">مثال : اعداد ۳۳ و AEF  نمونه های از اعدا در مبنا شانزده میباشد . </p>
+                          <h4 class="h4main">سیستم اکتال : </h4>
+                             <p class="pmain">در این سیستم هر عدد  ترکیبی از ارقام  { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7} می باشد . </p>
+                             <p class="pmain"> مثال : اعداد  466  و 731 نمونه هایی از سیستم اکتال و یا هشتی است . </p>
+                         <h4 class="h4main"> سیستم دسیمل ( اعشاری): </h4>
+                            <p class="pmain">داز این سیستم که در زندگی روز مره  نیز مورد استفاده می باشد . هر عدد ترکیبی از ارقام { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9} میباشد .
+                          </p>
+                          <p class="pmain"> مثال : اعداد 2001 و 50879 نمونه هایی از سیستم اعشاری هستند . </p>
+
+                             <h4 class="h4main"> تبدیل اعداد از سیستم هگزادسیمل به سیستم اکتال :</h4>
+                             <p class="pmain">برای تبدیل نمودن عدد از سیستم هگزاد سیمل ( قاعده ۱۶) به سیستم اکتال ( قاعده ۲) روش های متعدد وجود دارد که ذیلا به تشریح آن می پردازیم    </p>
+
+                             <p class="pmain">  روش اول :  </p>
+                             <p class="pmain">  (عدد ۱۶ ) کوچک شود در آخر آخرین خارج قسمت اگر  گرفته         به تعقیب آن تمامی باقی مانده ها از عملیه تقسیم گذشته را از انتها تا به ابتدا از طرف راست به چپ می نویسیم . عدد به دست آمده عدد در سیستم هگزادسیمل (قاعده ۱۶ )می باشد
+
+                            در این روش بخاطر تبدیل نمودن اعداد هگزادسیمل به اکتال نخست عدد هگزا دسیمل خود  را به عدد  دسیمل یعنی عدد با قاعده   ده            به روش مجموعه ارزش مجموعه ارزش مکانی ارقام عدد محاسبه می کنیم طوریکه ارقام عدد نام برده را با توجه به موقیعت مکانی هر     توان های عدد شانزده نموده و جمع می کنیم . باتوجه به این که با هر بار از دیاد  موقیعت رقم توان مبنا اظافه می شود یعنی در رقم اول توان مبنا صفر    رقم دوم توان مبنا یک  و متباقی ان را نیز به همین منوال ادامه میدهیم . وبعد ار ان جمع نموده عدد به دست آمده در سیستم دسیمل  می باشد .
+                            درمرحله بعدی عدد دسیمل خود را به عدد در سیستم اکتال (قاعده ۸)  با استفاده از روش تقسیم متوالی بر عدد هشت همان مبنا اولی میباشد تبدیل می نمایم روش کار این عملیه طور است که ابتدا عدد دسیمل خود را بر ۸ تقسیم می نمایم و باقی مانده  را اخذ می کنیم بعدا عملیه فوق را تا زمانی ادامه میدهیم که خارج قسمت از مبنا  (عدد ۸ ) کوچک شود در آخر آخرین خارج قسمت اگر          به تعقیب آن تمامی باقی مانده ها از عملیه تقسیم گذشته را از انتها تا به ابتدا از طرف راست به چپ می نویسیم . عدد به دست آمده عدد در سیستم اکتال (قاعده ۸ )می باشد
+
+                          </p>
+                           <p class="pmain">  روش دوم :   </p>
+                            <p class="pmain">  برای تبدیل نمودن عدد هگزا دسیمل به عدد اکتال عدد هگزا دسیمل خود را به عدد باینری تبدیل می کنیم .
+                        روش کار طوری است که هر رقم عدد درسیستم هگزا دسیمل به چهار بیت معادل آن از طرف چپ به راست می نویسیم عدد به دست آمده معادل هگزادسیمل در سیستم باینری است
+                        درمرحله بعدی عدد باینری خود را با استفاده از همان روش تقسیم بندی ارقام عدد به بیت ها وتعویض آن به قیمت معادل آن در سیستم دلخوا استفاده می نمایم
+                        روش کار طوری است که ابتدا عدد باینری خود را به سه سه بیت از راست به چپ تقسیم نموده و بعدا قیمت          معادل هرسه بیت را در سیستم اکتال ازچپ به راست می نویسیم عدد مذکور  عدد در سیستم اکتال است .
+                          </p>
+                              <p class="pmain">  نوت : برای تکمیل نموده تقسیم بندی بیت ها در صورت کمبود می توانیم از صفر ها نیز استفاده کنیم . </p>
+
+
+                          </b>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /ho -->
+                    </div>
+                </div>
+
+            </div>
+            <!-- /body -->
+        </div>
+        <!-- /continar -->
+        <!-- footer -->
+        <footer>
+            <p class="pfootar" style="direction:rtl;">حق کاپی © ۲۰۲۰ </p>
+        </footer>
+        <!-- footer -->
+        <script type="text/javascript" src="../javascript/app.js">
+        </script>
+</body>
+
+</html>

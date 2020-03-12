@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>calcularor</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/styleDP.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="../CSS/Hex-Calculator.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <!-- nav -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-align-justify"></i>
+          </label>
+        <label class="logo"><a class="logo-a" href="homeP.html">CALCULATOR</a></label>
+        <ul id="home">
+            <li><a class="nava" href="homeP.html"> کور پاڼه </a></li>
+            <li><a class="active nava" href="finalcalculator.html">حساب ماشین </a></li>
+            <li><a class="nava" href="aboutusP.html">زمونږ په اړه</a></li>
+        </ul>
+    </nav>
+    <!-- /nav -->
+    <div class="dashpord">
+        <!-- page location -->
+        <p class="position" dir="rtl">
+            <span> <b>کور پاڼه  /  حساب ماشین </b> </span>
+        </p>
+        <!-- /page location -->
+        <!-- web language -->
+        <p class="language">
+            <span><b><a href="../English/finalcalculator.html" class="h2po">English /</a></b></span>
+            <span><b><a href="../Dari/finalcalculator.html" class="h2po">دری</a></b></span>
+        </p>
+        <!-- /web languge -->
+    </div>
+
+    <!-- continar -->
+    <div class="continar" style="direction:rtl;">
+        <!-- body -->
+        <!-- selection of system -->
+        <div class="select">
+            <div class="new">
+                <!-- calculator -->
+                <div class="calculator1">
+                    <div class="all">
+                        <div class="main">
+                            <div class="sub">
+                                <h4>دسیمل سیستم بدلول :</h4>
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(1)" name="u" id="" checked>
+                                    <label for="a">باینری ته </label>
+                                </div>
+                                <!-- <br> -->
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(2)" name="u" id="">
+                                    <label for="b"> اکټال ته </label>
+                                </div>
+                                <!-- <br> -->
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(3)" name="u" id="">
+                                    <label for="c">هګزادسیمل ته </label>
+                                </div>
+                            </div>
+                            <!-- /decimal -->
+                            <!-- binary -->
+                            <div class="sub">
+                                <h4>باینری سیستم بدلول :</h4>
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(4)" name="u" id="">
+                                    <label for="u">دسیمل ته  </label>
+                                </div>
+                                <!-- <br> -->
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(5)" name="u" id="">
+                                    <label for="u"> اکټال ته </label>
+                                </div>
+                                <!-- <br> -->
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(6)" name="u" id="">
+                                    <label for="u"> هګزادسیمل ته  </label>
+                                </div>
+                            </div>
+                            <!-- /binary -->
+                            <!-- octal -->
+                            <div class="sub">
+                                <h4>اکټال سیستم بدلول :</h4>
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(7)" name="u" id="">
+                                    <label for="u">دسیمل ته </label>
+                                </div>
+                                <!-- <br> -->
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(8)" name="u" id="">
+                                    <label for="u"> باینری ته </label>
+                                </div>
+                                <!-- <br> -->
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(9)" name="u" id="">
+                                    <label for="u"> هګزادسیمل ته </label>
+                                </div>
+                            </div>
+                            <!-- /octal -->
+                            <!-- hexadecimal -->
+                            <div class="sub">
+                                <h4>هګزادسیمل سیستم بدلول :</h4>
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(10)" name="u" id="">
+                                    <label for="u">دسیمل ته  </label>
+                                </div>
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(11)" name="u" id="">
+                                    <label for="u">باینری ته  </label>
+                                </div>
+                                <div class="small">
+                                    <input type="radio" onclick="oprt(12)" name="u" id="">
+                                    <label for="u">اکټال ته </label>
+                                    <br>
+                                </div>
+
+                            </div>
+                            <!-- /hexadecimal -->
+                        </div>
+                    </div>
+                </div>
+                <!-- calculator -->
+                <div class="calculator">
+                    <form name="form">
+                        <input id="textBox" class="textview" name="textview" disabled style="direction:ltr;">
+                    </form>
+                    <table class="table">
+                        <!-- octal and decimal buttons -->
+                        <tr class="dec">
+                            <td>
+                                <button class="button" type="button" value="0" onclick="insert(0)">0</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="1" onclick="insert(1)">1</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="2" onclick="insert(2)">2</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="3" onclick="insert(3)">3</button>
+                            </td>
+                        </tr>
+                        <tr class="dec">
+                            <td>
+                                <button class="button" type="button" value="7" onclick="insert(7)">7</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="6" onclick="insert(6)">6</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="5" onclick="insert(5)">5</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="4" onclick="insert(4)">4</button>
+                            </td>
+                        </tr>
+                        <tr class="dec dec1">
+                            <td colspan="1">
+                                <button class="button" type="button" value="8" onclick="insert(8)">8</button>
+                            </td>
+                            <td colspan="1">
+                                <button class="button" type="button" value="9" onclick="insert(9)">9</button>
+                            </td>
+                        </tr>
+                        <tr class="dec dec2">
+                            <td colspan="1">
+                                <button class="button " type="button" value="convert" onclick="resultl()">CONVERT </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="convert" onclick="clear1()">clear </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="convert" onclick="clearAll()">clear all </button>
+                            </td>
+                        </tr>
+
+                        <!-- /octal and decimal buttons  -->
+                        <!-- binary bttons -->
+                        <tr class="bin bin1">
+                            <td colspan="2">
+                                <button class="button " type="button" value="0" onclick="insert(0)">0</button>
+                            </td>
+                            <td colspan="2">
+                                <button class="button" type="button" value="1" onclick="insert(1)">1</button></td>
+                        </tr>
+                        <tr class="bin bin2">
+                            <td>
+                                <button class="button " type="button" value="convert" onclick="resultl()">CONVERT </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="convert" onclick="clear1()">clear </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="convert" onclick="clearAll()">clear all </button>
+                            </td>
+                        </tr>
+                        <!-- /binary buttons -->
+                        <!-- hexadecimal buttons -->
+                        <tr class="hex">
+                            <td>
+                                <button class="button" type="button" value="A" onclick="insert('A')">A</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="B" onclick="insert('B')">B</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="C" onclick="insert('C')">C</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="D" onclick="insert('D')">D</button>
+                            </td>
+                        </tr>
+                        <tr class="hex">
+                            <td>
+                                <button class="button" type="button" value="7" onclick="insert('E')"> E </button>
+                            </td>
+                            <td>
+                                <button class="button" value="8" onclick="insert('F')">F </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="9" onclick="insert(0)">  0 </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="E" onclick="insert('E')"> 1</button>
+                            </td>
+                        </tr>
+                        <tr class="hex">
+                            <td>
+                                <button class="button" type="button" value="4" onclick="insert(5)"> 5 </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="5" onclick="insert(4)"> 4</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="6" onclick="insert(3)"> 3</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="F" onclick="insert(2)"> 2</button>
+                            </td>
+                        </tr>
+
+                        <tr class="hex">
+                            <td>
+                                <button class="button" type="button" value="1" onclick="insert(6)"> 6 </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="2" onclick="insert(7)"> 7</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="3" onclick="insert(8)"> 8</button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="0" onclick="insert(9)"> 9</button>
+                            </td>
+                        </tr>
+                        <tr class="hex hex1">
+                            <td>
+                                <button class="button " type="button" value="convert" onclick="resultl()">CONVERT </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="convert" onclick="clear1()">clear </button>
+                            </td>
+                            <td>
+                                <button class="button" type="button" value="convert" onclick="clearAll()">clear all </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /calculator -->
+            </div>
+            <!-- /calculator -->
+            <p class="instruction">کړنلاری</p>
+            <div class="middle">
+                <div class="me">
+                    <!-- Decimal to binary instruction -->
+
+                    <li class="item" id="db">
+                        <a href="#db" class="btn">دسیمل سیستم بدلول باینری ته  </a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> اعشاری ( دسیمل ) سیستم بدلول باینری ته : </h3>
+                                <h4 class="h4main"> اعشاری( دسیمل ) سیستم : </h4>
+                                <b><p class="pmain">دسیمل سیستم یو له مهمو سیستمونو څخه دی . چی له کمپیوټری نړی نه بهر په ورځینی ژوند کی هم ور څخه ګټه اخیستل کیږی .
+                                  ددی سیستم مبناء لس دی . یعنی ددی سیستم اعداد دلاندی لسو رقمونو له یوځای کیدلو څخه لاسته راځی
+                                </p>
+                                <p class="pmain"> { ۰ ، ۱ ، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ ، ۸ ، ۹} </p>
+                                <p class="pmain"> مثال  : ۲۰۰۱ ،۵۰۸۷۹ دغه اعداد د سیمل سیستم بیلګی دی . </p>
+                                <h4 class="h4main"> باینری سیستم : </h4>
+                                <p class="pmain"> ددی سیستم مبناء دوه دی . په دی سیستم کی هرعدد د دو لاندی رقمونو له یوځای کیدلو څخه لاسته راځی</p>
+                                <p class="pmain"> { ۰ ، ۱} </p>
+                                <p class="pmain"> مثال : ۱۱۰۱ ، ۱۰۰۱۱  دغه اعداد ده باینری سیستم بیلګی دی . </p>
+                                <h4 class="h4main"> عشاری ( دسیمل ) سیستم بدلول باینری ته  :</h4>
+                                <p class="pmain">د دسیمل سیستم څخه باینری سیستم ته د عدد ده تبدیل کولو لپاره ده پرله پسی توګه تقسیم عملیی څخه ګټه اخلو .
+                              څرنګه چی به دی طریقه کی مقسوم علیه ۲ او مقسوم راکړل شوی عدد ده لسو په مبناء کی دی کوم چی غواړی باینری سیستم ته تبد یل کړو .
+                               <br>
+                              کړنلاره :<br>
+                              لومړی پړاو کی راکړل شوی عدد په دو تقسیم کوو او دی ته تر هغی دوام ورکوو چی پاتی برخه ۱ یا  ۰  شی .
+                              په دوهم پړاو کی خپل خارج قسمت په نظر کی نیسو که چیری دا عدد یعنی خارج قسمت له مقسوم څخه لوی وی په دی صورت کی بیا هم لومړی پړاو پلی کوو یعنی خارج قسمت بیاهم په دو تقسیم کوو
+                              او دی عملی ته تر هغه دوام ورکوو چی خارج قسمت مو له مبناء ( ۲ ) څخه کوچنی شی .
+                              اوس ده وروستی خارج قسمت په کډون ده مخکینیو تقسیم عملیو پاتی برخی په ترتیب له پیل نه تر پایه کیڼ نه ښی لوری ته به ترتیب یو د بل ترڅنګ د ارقامو اوډل ترسره کوو
+                              لاسته راغلی عدد ده باینری سیستم عدد دی .
+                             </p>
+                              <p class="pmain"> مثال : ۱۳ له دیسمل سیستم څخه باینری ته واړویکړی .</p>
+                              <p class="pimg"> <img src="../img/DBEx.png" class="mainimg"></p>
+
+                            </b>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- /Db -->
+                    <!-- do -->
+                    <li class="item" id="do">
+                        <a href="#do" class="btn">دسیمل سیستم بدلول اکټال ته     </a>
+                        <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                                <h3> دسیمل سیستم بدلول اکټال ته : </h3>
+                                <b> <h4 class="h4main"> اعشاری( دسیمل ) سیستم :  </h4>
+                                   <p class="pmain">دسیمل سیستم یو له مهمو سیستمونو څخه دی . چی له کمپیوټری نړی نه باندی په ورځینی ژوند کی هم ور څخه ګټه اخیستل کیږی .
+                                  ددی سیستم مبناء لس دی . یعنی ددی سیستم اعداد دلاندی لسو رقمونو له یوځای کیدلو څخه لاسته راځی
+                                   </p>
+                                   <p class="pmain"> { ۰ ، ۱ ، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ ، ۸ ، ۹} </p>
+                                   <p class="pmain"> مثال  : ۲۰۰۱ ،۵۰۸۷۹ دغه اعداد د سیمل سیستم بیلګی دی . </p>
+
+                                   <h4 class="h4main">اکتال سیستم : </h4>
+                                   <p class="pmain">داکتال سیستم مبناء اته دی .په دی سیستم کی هر عدد له لاندی اتو عددونو له اوډلو څخه لاسته راځی . </p>
+                                   <p class="pmain"> { ۰ ، ۱، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ } </p>
+                                   <p class="pmain"> مثال : ۴۶۶ ، ۷۳۱ اعداد د اکتال سیستم بیلګی دی . </p>
+
+
+                                   <h4 class="h4main"> عشاری ( دسیمل ) سیستم بدلول اکتال ته  :</h4>
+                                   <p class="pmain">د دسیمل سیستم څخه اکتال سیستم ته د عدد ده تبدیل کولو لپاره ده پرله پسی توګه تقسیم عملیی څخه ګټه اخلو .
+                                      څرنګه چی به دی طریقه کی مقسوم علیه ۸ او مقسوم راکړل شوی عدد ده لسو په مبناء کی دی کوم چی غواړی اکتال سیستم ته تبد یل کړو .
+                                  <br>
+                                  کړنلاره :<br>
+                                  لومړی پړاو کی راکړل شوی عدد په اتو تقسیم کوو او دی عملیی ته تر هغی دوام ورکوو خارج قسمت له مقسوم علیه نه لوی وی .
+                                  په دوهم پړاو کی خپل خارج قسمت په نظر کی نیسو که چیری دا عدد یعنی خارج قسمت له مقسوم څخه لوی وی په دی صورت کی بیا هم لومړی پړاو پلی کوو یعنی خارج قسمت بیاهم په اتو تقسیم کوو
+                                  او دی عملی ته تر هغه دوام ورکوو چی خارج قسمت مو له مبناء ( ۸ ) څخه کوچنی شی .
+                                  اوس ده وروستی خارج قسمت په کډون ده مخکینیو تقسیم عملیو پاتی برخی په ترتیب له پیل نه تر پایه کیڼ نه ښی لوری ته به ترتیب یو د بل ترڅنګ د ارقامو اوډل ترسره کوو
+                                  لاسته راغلی عدد ده اکتال سیستم عدد دی .
+
+                                   </p>
+                                    <p class="pmain">  بیلګه :  8( ? ) = 10 ( 7562 ) </p>
+                                    <p class="pimg"> <img src="../img/DOEx.png" class="mainimg"></p>
+                                </b>
+                            </div>
+                        </div>
+                </div>
+                </li>
+                <!-- /do -->
+                <!-- dh -->
+                <li class="item" id="dh">
+                    <a href="#dh" class="btn">دسیمل سیستم بدلول هګزادسیمل ته  </a>
+                    <div class="sme">
+                        <div class="body" style="direction:rtl;">
+                            <h3> دسیمل سیستم بدلول هګزادسیمل ته : </h3>
+                            <h4 class="h4main"> اعشاری( دسیمل ) سیستم : </h4>
+                            <b><p class="pmain">دسیمل سیستم یو له مهمو سیستمونو څخه دی . چی له کمپیوټری نړی نه بهر په ورځینی ژوند کی هم ور څخه ګټه اخیستل کیږی .
+                                  ددی سیستم مبناء لس دی . یعنی ددی سیستم اعداد دلاندی لسو رقمونو له یوځای کیدلو څخه لاسته راځی
+                                </p>
+                                <p class="pmain"> { ۰ ، ۱ ، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ ، ۸ ، ۹} </p>
+                                <p class="pmain"> مثال  : ۲۰۰۱ ،۵۰۸۷۹ دغه اعداد د سیمل سیستم بیلګی دی . </p>
+                                <h4 class="h4main"> هګزادسیمل سیستم : </h4>
+                                <p class="pmain"> د دی سیستم مبناء شپاړس دی . په دی سیستم کی هرعدد ده لاندی ارقامو او سمبولو نو له اوډلو سخه لاسته راځی .  </p>
+                                <p class="pmain"> { 1 , 2 , 3 , 4 , 5, 6 , 7 , 8 , 9 , A , B , C , D , E , F }</p>
+                                <p class="pmain"> مثال : AFE  ، ۳۳ AD اعداد ده اکتال سیستم بیلګی دی . </p>
+                                <h4 class="h4main">عشاری ( دسیمل ) سیستم بدلول هګزادسیمل ته  :</h4>
+                                <p class="pmain">د دسیمل سیستم څخه هګزادسیمل سیستم ته د عدد تبدیل کولو لپاره ده پرله پسی توګه تقسیم عملیی څخه ګټه اخلو .
+                                  څرنګه چی به دی طریقه کی مقسوم علیه ۱۶ او مقسوم راکړل شوی عدد ده لسو په مبناء کی دی کوم چی غواړی هګزادسیمل سیستم ته تبد یل کړو .
+
+                               <br>
+                              کړنلاره :<br>
+                              لومړی پړاو کی راکړل شوی عدد په ۱۶ تقسیم کوو او دی عملیی ته تر هغی دوام ورکوو چی خارج قسمت له مقسوم علیه نه لوی وی .
+                              په دوهم پړاو کی خپل خارج قسمت په نظر کی نیسو که چیری دا عدد یعنی خارج قسمت له مقسوم څخه لوی وی په دی صورت کی بیا هم لومړی پړاو پلی کوو یعنی خارج قسمت بیاهم په ۱۶ تقسیم کوو .
+                              او دی عملی ته تر هغه دوام ورکوو چی خارج قسمت مو له مبناء ( ۱۶ ) څخه کوچنی شی .
+                              اوس ده وروستی خارج قسمت په کډون ده مخکینیو تقسیم عملیو پاتی برخی په ترتیب له پیل نه تر پایه کیڼ نه ښی لوری ته به ترتیب یو د بل ترڅنګ د ارقامو اوډل ترسره کوو
+                              لاسته راغلی عدد ده اکتال سیستم عدد دی .
+
+                             </p>
+                              <p class="pmain">  بیلګه :  10 ( ? )  =    16( 108 ) </p>
+
+                            </b>
+                        </div>
+
+                        <div class="body">
+                            <p class="pimg"> 108 / 16 = 12 &nbsp; &nbsp; &nbsp; &nbsp;= C</p>
+                            <p class="pimg">( 108 ) 16 = 10 ( 6C ) &nbsp;&nbsp;&nbsp;</p>
+                        </div>
+                    </div>
+            </div>
+            </li>
+            <!-- dh -->
+            <!-- bd -->
+            <li class="item" id="bd">
+                <a href="#bd" class="btn">باینری سیستم بدلول دسیمل ته     </a>
+                <div class="sme">
+                    <!-- body -->
+                    <div class="body" style="direction:rtl;">
+                        <h3> باینری سیستم بدلول دسیمل ته : </h3>
+                        <b> <h4 class="h4main"> باینری سیستم : </h4>
+                               <p class="pmain"> ددی سیستم مبناء هدو دی . په دی سیستم کی هرعدد د دو لاندی رقمونو له یوځای کیدلو څخه لاسته راځی</p>
+                               <p class="pmain"> { ۰ ، ۱} </p>
+                               <p class="pmain"> مثال : ۱۱۰۱ ، ۱۰۰۱۱  دغه اعداد ده باینری سیستم بیلګی دی . </p>
+                               <h4 class="h4main"> اعشاری( دسیمل ) سیستم :  </h4>
+                               <p class="pmain">دسیمل سیستم یو له مهمو سیستمونو څخه دی . چی له کمپیوټری نړی نه باندی په ورځینی ژوند کی هم ور څخه ګټه اخیستل کیږی .
+                              ددی سیستم مبناء لس دی . یعنی ددی سیستم اعداد دلاندی لسو رقمونو له یوځای کیدلو څخه لاسته راځی
+                               </p>
+                               <p class="pmain"> { ۰ ، ۱ ، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ ، ۸ ، ۹} </p>
+                               <p class="pmain"> مثال  : ۲۰۰۱ ،۵۰۸۷۹ دغه اعداد د سیمل سیستم بیلګی دی . </p>
+
+                               <h4 class="h4main"> باینری سیستم بدلول دسیمل ته :</h4>
+                               <p class="pmain">ده باینری سیستم څخه دسیمل سیستم ته د اعدادو د تبدیل کولو لپاره د ارقامو د موقیعت ارزښت مجموعه محاسبه کوو.             <br>
+                              کړنلاره :<br>
+                              ددی لپاره چی یو عدد له دسیمل سیستم څخه باینری ته تبدیل ګړو لومړی پړاو کی په باینری سیستم کی راکړل شوی عدد لومړی رقم په دو کی ضرب کوو او ددغه لومړی رقم لپاره ده دو توان  صفر په نظر کی نیسو او ورپسی دو هم رقم په دوو کی ضرب کوو ددی رقم یعنی دوهم رقم لپاره ده دو توان یو په نظر کی نیسو او همداسی په پرله پسی توکه د هر رقم ورستی عدد په اخیستلو سره د ۲ عدد توان زیاتوو او دی عملی ته تر هغی ادامه ورکوو چی ده باینری عدد هر رقم په دوو کی ضرب شی په وروستی پړاو کی ټول لاسته راغلی ارقام جمع کوو لاسته راغلی عدد ددسیمل سیستم عدد دی  .
+                               </p>
+                                <p class="pmain">  بیلګه : ۱۰( ؟ ) = ۲(۱۰۱۱۰۰۱) </p>
+                                <p class="pimg"> <img src="../img/BDEx.png" class="mainimg"></p>
+                            </b>
+                    </div>
+                    <!-- /body -->
+                </div>
+            </li>
+            <!-- /bd -->
+            <!-- bo -->
+            <li class="item" id="bo">
+                <a href="#bo" class="btn">باینری سیستم بدلول اکټال ته </a>
+                <div class="sme">
+                    <div class="body" style="direction:rtl;">
+                        <h3> باینری سیستم بدلول اکټال ته : </h3>
+                        <b> <h4 class="h4main"> باینری سیستم : </h4>
+                                   <p class="pmain"> ددی سیستم مبناء هدو دی . په دی سیستم کی هرعدد د دو لاندی رقمونو له یوځای کیدلو څخه لاسته راځی</p>
+                                   <p class="pmain"> { ۰ ، ۱} </p>
+                                   <p class="pmain"> مثال : ۱۱۰۱ ، ۱۰۰۱۱  دغه اعداد ده باینری سیستم بیلګی دی . </p>
+                                   <h4 class="h4main">اکتال سیستم : </h4>
+                                   <p class="pmain">داکتال سیستم مبناء اته دی .په دی سیستم کی هر عدد له لاندی اتو عددونو له اوډلو څخه لاسته راځی . </p>
+                                   <p class="pmain"> { ۰ ، ۱، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ } </p>
+                                   <p class="pmain"> مثال : ۴۶۶ ، ۷۳۱ اعداد د اکتال سیستم بیلګی دی . </p>
+                                   <h4 class="h4main"> اعشاری( دسیمل ) سیستم :  </h4>
+                                   <p class="pmain">دسیمل سیستم یو له مهمو سیستمونو څخه دی . چی له کمپیوټری نړی نه باندی په ورځینی ژوند کی هم ور څخه ګټه اخیستل کیږی .
+                                  ددی سیستم مبناء لس دی . یعنی ددی سیستم اعداد دلاندی لسو رقمونو له یوځای کیدلو څخه لاسته راځی
+                                   </p>
+                                   <p class="pmain"> { ۰ ، ۱ ، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ ، ۸ ، ۹} </p>
+                                   <p class="pmain"> مثال  : ۲۰۰۱ ،۵۰۸۷۹ دغه اعداد د سیمل سیستم بیلګی دی . </p>
+                                   <h4 class="h4main"> باینری سیستم بدلول اکټال ته :  </h4>
+                                   <p class="pmain">
+                              د باینری سیستم څخه اکتال سیستم ته د عدد د تبدیل کولو لپاره دو جلا لاری لرو چی هر یو یی لاندی په تفصیل سره تشریح کوو <br>
+                              </p>
+
+                              <p class="pmain">لومړی پړاو : په ده طریقه کی مونږ لومړی خپل باینری عدد دسیمل سیستم ته په لاندی توګه تبدیلوو </p>
+                              <h4 class="h4main"> باینری سیستم بدلول دسیمل ته :</h4>
+                              <p class="pmain">ده باینری سیستم څخه دسیمل سیستم ته د اعدادو د تبدیل کولو لپاره د ارقامو د موقیعت ارزښت مجموعه محاسبه کوو.             <br>
+                             کړنلاره :<br>
+                             ددی لپاره چی یو عدد له دسیمل سیستم څخه باینری ته تبدیل ګړو لومړی پړاو کی په باینری سیستم کی راکړل شوی عدد لومړی رقم په دو کی ضرب کوو او ددغه لومړی رقم لپاره ده دو توان  صفر په نظر کی نیسو او ورپسی دو هم رقم په دوو کی ضرب کوو ددی رقم یعنی دوهم رقم لپاره ده دو توان یو په نظر کی نیسو او همداسی په پرله پسی توکه د هر رقم ورستی عدد په اخیستلو سره د ۲ عدد توان زیاتوو او دی عملی ته تر هغی ادامه ورکوو چی ده باینری عدد هر رقم په دوو کی ضرب شی په وروستی پړاو کی ټول لاسته راغلی ارقام جمع کوو لاسته راغلی عدد ددسیمل سیستم عدد دی  .
+                              </p>
+                              <p class="pmain">په دویم پړاو کی خپل دسیمل عدد په لاندی توګه اکتال  ته  تبدیل کوو  </p>
+                              <h4 class="h4main"> عشاری ( دسیمل ) سیستم بدلول اکتال ته  :</h4>
+                              <p class="pmain">د دسیمل سیستم څخه اکتال سیستم ته د عدد ده تبدیل کولو لپاره ده پرله پسی توګه تقسیم عملیی څخه ګټه اخلو .
+                                 څرنګه چی به دی طریقه کی مقسوم علیه ۸ او مقسوم راکړل شوی عدد ده لسو په مبناء کی دی کوم چی غواړی اکتال سیستم ته تبد یل کړو .
+                             <br>
+                             کړنلاره :<br>
+                             لومړی پړاو کی راکړل شوی عدد په اتو تقسیم کوو او دی عملیی ته تر هغی دوام ورکوو خارج قسمت له مقسوم علیه نه لوی وی .
+                             په دوهم پړاو کی خپل خارج قسمت په نظر کی نیسو که چیری دا عدد یعنی خارج قسمت له مقسوم څخه لوی وی په دی صورت کی بیا هم لومړی پړاو پلی کوو یعنی خارج قسمت بیاهم په اتو تقسیم کوو
+                             او دی عملی ته تر هغه دوام ورکوو چی خارج قسمت مو له مبناء ( ۸ ) څخه کوچنی شی .
+                             اوس ده وروستی خارج قسمت په کډون ده مخکینیو تقسیم عملیو پاتی برخی په ترتیب له پیل نه تر پایه کیڼ نه ښی لوری ته به ترتیب یو د بل ترڅنګ د ارقامو اوډل ترسره کوو
+                             لاسته راغلی عدد ده اکتال سیستم عدد دی .
+
+                              </p>
+
+                              <p class="pmain">په ده طریقه کی خپل باینری عدد د بیتونه په وسیله  اکتال سیستم ته  تبدیل کوو </p>
+                              <p class="pmain">کړنلاره :</p>
+
+
+                              <p class="pmain">لومړی پړاو کی خپل باینری عدد ښی لور نه کین لور ته دری دری بیتونه جلا کوو وروسته له جلا کول د هر دری بیت معادل په اکتال سیستم که له کین نه ښی لوری ته لیکو لاسته راغلی عدد په اکتال سیستم کی دی .    </p>
+                              <p class="pmain">مثال : 10  ( ? ) = 2( 10111 ) </p>
+
+
+                                 </b>
+                    </div>
+                    <div class="body " style="direction:ltr;">
+                        <div class="BOExl">
+                            <b>
+                                      <p class="pmain"> ( 10111 )2 = ( ? )8 &nbsp;&nbsp;  </p>
+                                      <p class="pmain">  010   =  2 &nbsp; </p>
+                                      <p class="pmain"> 111  =  7 &nbsp;</p>
+                                      <p class="pmain"> 8  ( 27 ) = 2( 10111 ) </p>
+                                      <p class="pimg"> </p>
+                                  </b>
+                        </div class="BOExr">
+                        <div>
+                            <b>
+                                      <p class="pimg"><img src="../img/BOEx.png" class="mainimg"></p>
+                                  </b>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- /bo -->
+            <!-- bh -->
+            <li class="item" id="bh">
+                <a href="#bh" class="btn">باینری سیستم بدلول هګزادسیمل ته  </a>
+                <div class="sme">
+                    <div class="body" style="direction:rtl;">
+                        <h3> باینری سیستم بدلول هګزادسیمل ته : </h3>
+                        <b>  <h4 class="h4main"> باینری سیستم : </h4>
+                                       <p class="pmain"> ددی سیستم مبناء هدو دی . په دی سیستم کی هرعدد د دو لاندی رقمونو له یوځای کیدلو څخه لاسته راځی</p>
+                                       <p class="pmain"> { ۰ ، ۱} </p>
+                                       <p class="pmain"> مثال : ۱۱۰۱ ، ۱۰۰۱۱  دغه اعداد ده باینری سیستم بیلګی دی . </p>
+                                       <h4 class="h4main"> هګزادسیمل سیستم : </h4>
+                                       <p class="pmain"> د دی سیستم مبناء شپاړس دی . په دی سیستم کی هرعدد ده لاندی ارقامو او سمبولو نو له اوډلو سخه لاسته راځی .  </p>
+                                       <p class="pmain"> { 1 , 2 , 3 , 4 , 5, 6 , 7 , 8 , 9 , A , B , C , D , E , F }</p>
+                                       <p class="pmain"> مثال : AFE  ، ۳۳ AD اعداد ده اکتال سیستم بیلګی دی . </p>
+                                       <h4 class="h4main"> اعشاری( دسیمل ) سیستم :  </h4>
+                                       <p class="pmain">دسیمل سیستم یو له مهمو سیستمونو څخه دی . چی له کمپیوټری نړی نه باندی په ورځینی ژوند کی هم ور څخه ګټه اخیستل کیږی .
+                                      ددی سیستم مبناء لس دی . یعنی ددی سیستم اعداد دلاندی لسو رقمونو له یوځای کیدلو څخه لاسته راځی
+                                       </p>
+                                       <p class="pmain"> { ۰ ، ۱ ، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ ، ۸ ، ۹} </p>
+                                       <p class="pmain"> مثال  : ۲۰۰۱ ،۵۰۸۷۹ دغه اعداد د سیمل سیستم بیلګی دی . </p>
+
+                                    <h4 class="h4main"> باینری سیستم بدلول هګزا دسیمل ته :</h4>
+                                    <p class="pmain">
+                              د باینری سیستم څخه هګزادسیمل   ته د عدد د تبدیل کولو لپاره دو جلا لاری لرو چی هر یو یی لاندی په تفصیل سره تشریح کوو  <br>
+                               </p>
+
+                               <p class="pmain">
+                                لومړی پړاو : په ده لاره کی مونږ لومړی خپل باینری عدد دسیمل سیستم ته په لاندی توګه تبدیل کوو
+                                باینری به دسیمل پست شوه
+                                </p>
+                               <h4 class="h4main"> باینری سیستم بدلول دسیمل ته :</h4>
+                               <p class="pmain">ده باینری سیستم څخه دسیمل سیستم ته د اعدادو د تبدیل کولو لپاره د ارقامو د موقیعت ارزښت مجموعه محاسبه کوو.             <br>
+                              کړنلاره :<br>
+                              ددی لپاره چی یو عدد له دسیمل سیستم څخه باینری ته تبدیل ګړو لومړی پړاو کی په باینری سیستم کی راکړل شوی عدد لومړی رقم په دو کی ضرب کوو او ددغه لومړی رقم لپاره ده دو توان  صفر په نظر کی نیسو او ورپسی دو هم رقم په دوو کی ضرب کوو ددی رقم یعنی دوهم رقم لپاره ده دو توان یو په نظر کی نیسو او همداسی په پرله پسی توکه د هر رقم ورستی عدد په اخیستلو سره د ۲ عدد توان زیاتوو او دی عملی ته تر هغی ادامه ورکوو چی ده باینری عدد هر رقم په دوو کی ضرب شی په وروستی پړاو کی ټول لاسته راغلی ارقام جمع کوو لاسته راغلی عدد ددسیمل سیستم عدد دی  .
+                               </p>
+                               <p class="pmain">په دویم پړاو کی خپل دسیمل عدد په لاندی توګه اکتال  ته  تبدیل کوو  </p>
+                               <h4 class="h4main">عشاری ( دسیمل ) سیستم بدلول هګزادسیمل ته  :</h4>
+                               <p class="pmain">د دسیمل سیستم څخه هګزادسیمل سیستم ته د عدد تبدیل کولو لپاره ده پرله پسی توګه تقسیم عملیی څخه ګټه اخلو .
+                                 څرنګه چی به دی طریقه کی مقسوم علیه ۱۶ او مقسوم راکړل شوی عدد ده لسو په مبناء کی دی کوم چی غواړی هګزادسیمل سیستم ته تبد یل کړو .
+
+                              <br>
+                             کړنلاره :<br>
+                             لومړی پړاو کی راکړل شوی عدد په ۱۶ تقسیم کوو او دی عملیی ته تر هغی دوام ورکوو چی خارج قسمت له مقسوم علیه نه لوی وی .
+                             په دوهم پړاو کی خپل خارج قسمت په نظر کی نیسو که چیری دا عدد یعنی خارج قسمت له مقسوم څخه لوی وی په دی صورت کی بیا هم لومړی پړاو پلی کوو یعنی خارج قسمت بیاهم په ۱۶ تقسیم کوو .
+                             او دی عملی ته تر هغه دوام ورکوو چی خارج قسمت مو له مبناء ( ۱۶ ) څخه کوچنی شی .
+                             اوس ده وروستی خارج قسمت په کډون ده مخکینیو تقسیم عملیو پاتی برخی په ترتیب له پیل نه تر پایه کیڼ نه ښی لوری ته به ترتیب یو د بل ترڅنګ د ارقامو اوډل ترسره کوو
+                             لاسته راغلی عدد ده اکتال سیستم عدد دی .  </p>
+
+                               <p class="pmain">په ده طریقه کی خپل باینری عدد د بیتونه په وسیله هګزادسیمل سیستم ته تبدیل کوو  </p>
+                               <p class="pmain">کړنلاره :</p>
+                               <p class="pmain">لومړی پړاو کی خپل باینری عدد ښی لور نه کین لور ته څلور څلور بیتونه جلا کوو وروسته له جلا کول د هر څلورو بیت معادل په اکتال سیستم که له کین نه شی لوری ته لیکو لاسته راغلی عدد په هګزادسیمل سیستم کی دی   </p>
+                               <p class="pmain">مثال : 10  ( ? ) = 2( 10111 ) </p>
+                                 </b>
+                    </div>
+                    <div class="body " style="direction:ltr;">
+
+                        <b>
+                                          <p class="pmain"> ( 111001110001 )2 = ( ? )16 &nbsp;&nbsp;  </p>
+                                          <p class="pmain">  0001   =  1 &nbsp; </p>
+                                          <p class="pmain"> 0111  =  7 &nbsp;</p>
+                                          <p class="pmain"> 1110  =  14 = E &nbsp;</p>
+                                          <p class="pmain"> ( 111001110001 ) 2  = 16  ( E71 )</p>
+                                          <p class="pimg"> </p>
+                                      </b>
+                    </div>
+                </div>
+            </li>
+            <!-- /bh -->
+            <!-- od -->
+            <li class="item" id="od">
+                <a href="#od" class="btn">اکټال سیستم بدلول دسیمل ته </a>
+                <div class="sme">
+                    <div class="body" style="direction:rtl;">
+                        <h3> اکټال سیستم بدلول دسیمل ته : </h3>
+                        <b>   <h4 class="h4main">اکتال سیستم : </h4>
+                                <p class="pmain">داکتال سیستم مبناء اته دی .په دی سیستم کی هر عدد له لاندی اتو عددونو له اوډلو څخه لاسته راځی . </p>
+                                <p class="pmain"> { ۰ ، ۱، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ } </p>
+                                <p class="pmain"> مثال : ۴۶۶ ، ۷۳۱ اعداد د اکتال سیستم بیلګی دی . </p>
+                                <h4 class="h4main"> اعشاری( دسیمل ) سیستم :  </h4>
+                                 <p class="pmain">دسیمل سیستم یو له مهمو سیستمونو څخه دی . چی له کمپیوټری نړی نه باندی په ورځینی ژوند کی هم ور څخه ګټه اخیستل کیږی .
+                                ددی سیستم مبناء لس دی . یعنی ددی سیستم اعداد دلاندی لسو رقمونو له یوځای کیدلو څخه لاسته راځی
+                                 </p>
+                                 <p class="pmain"> { ۰ ، ۱ ، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ ، ۸ ، ۹} </p>
+                                 <p class="pmain"> مثال  : ۲۰۰۱ ،۵۰۸۷۹ دغه اعداد د سیمل سیستم بیلګی دی . </p>
+                                     <h4 class="h4main">  اکتال سیستم بدلول دسیمل ته :</h4>
+                                     <p class="pmain">ده اکتال  سیستم څخه دسیمل سیستم ته د اعدادو د تبدیل کولو لپاره د ارقامو د موقیعت ارزښت مجموعه محاسبه کوو. .
+                        			<br>
+                        				ددی لپاره چی یو عدد له اکتال سیستم څخه دسیمل سیستم ته تبدیل ګړو لومړی پړاو کی په اکتال سیستم کی راکړل شوی عدد لومړی رقم په اتو کی ضرب کوو او ددغه لومړی رقم لپاره ده اتو توان  صفر په نظر کی نیسو او ورپسی دوهم  رقم په اتو کی ضرب کوو ددی رقم یعنی دوهم  رقم  لپاره ده اتو توان یو په نظر کی نیسو او همداسی په پرله پسی توکه د عدد هر ورستی رقم په اخیستلو سره د ۸ عدد توان زیاتوو او دی عملی ته تر هغی ادامه ورکوو چی ده اکتال عدد هر رقم په اتو کی ضرب شی په وروستی پړاو کی ټول لاسته راغلی ارقام جمع کوو لاسته راغلی عدد ددسیمل سیستم عدد دی  .
+                                     </p>
+                                      <p class="pmain">  مثال:  10 ( ? ) =  8( 300 ) </p>
+                                      <p class="pimg"> <img src="../img/ODEx.png" class="mainimg"></p>
+                                  </b>
+                    </div>
+                </div>
+            </li>
+            <!-- /od -->
+            <!-- ob -->
+            <li class="item" id="ob">
+                <a href="#ob" class="btn">اکټال سیستم بدلول باینری ته  </a>
+                <div class="sme">
+                    <div class="body" style="direction:rtl;">
+                        <h3> اکتال سیستم بدلول باینری ته </h3>
+                        <b>
+                                    <h4 class="h4main"> باینری سیستم : </h4>
+                                     <p class="pmain"> ددی سیستم مبناء هدو دی . په دی سیستم کی هرعدد د دو لاندی رقمونو له یوځای کیدلو څخه لاسته راځی</p>
+                                     <p class="pmain"> { ۰ ، ۱} </p>
+                                     <p class="pmain"> مثال : ۱۱۰۱ ، ۱۰۰۱۱  دغه اعداد ده باینری سیستم بیلګی دی . </p>
+                                     <h4 class="h4main">اکتال سیستم : </h4>
+                                     <p class="pmain">داکتال سیستم مبناء اته دی .په دی سیستم کی هر عدد له لاندی اتو عددونو له اوډلو څخه لاسته راځی . </p>
+                                     <p class="pmain"> { ۰ ، ۱، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ } </p>
+                                     <p class="pmain"> مثال : ۴۶۶ ، ۷۳۱ اعداد د اکتال سیستم بیلګی دی . </p>
+                                     <h4 class="h4main"> اعشاری( دسیمل ) سیستم :  </h4>
+                                     <p class="pmain">دسیمل سیستم یو له مهمو سیستمونو څخه دی . چی له کمپیوټری نړی نه باندی په ورځینی ژوند کی هم ور څخه ګټه اخیستل کیږی .
+                                    ددی سیستم مبناء لس دی . یعنی ددی سیستم اعداد دلاندی لسو رقمونو له یوځای کیدلو څخه لاسته راځی
+                                     </p>
+                                     <p class="pmain"> { ۰ ، ۱ ، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ ، ۸ ، ۹} </p>
+                                     <p class="pmain"> مثال  : ۲۰۰۱ ،۵۰۸۷۹ دغه اعداد د سیمل سیستم بیلګی دی . </p>
+
+                                <h4 class="h4main">    اکتال سیستم بدلول باینری ته :</h4>
+                                <p class="pmain">د اکتال عدد څخه باینری سیستم ته د عد تبدیل کولو لپاره دوه جلا لاری لرو چی هر یو یی لاندی په تفصیل سره تشریح کوو
+
+                              </p>
+                                <p class="pmain">لومړی لاره :  </p>
+                              <p class="pmain"> کړنلاره :
+                            په دی طریقه کی ددی لپاره چی خپل اکتال عدد باینری سیستم  ته واړو نو لومړی خپل اکتال عدد په دسیمل او وروسته همداغه نوی دسیمل عدد باینری سیستم ته  اړوو.  </p>
+                                <p class="pmain">دوهمه لاره :  </p>
+                              <p class="pmain"> کړنلاره :
+                              خپل اکتال عدد هر رقم د هغه په معادل دری دری بیتونه په باینری سیستم کی لیکو او وروسته په همغه ترتیب سره خپل ټول اکتال عدد معادل بیتونه په باینری کی لیکو وروسته چی مو باینری عدد تر لاسه کړه نو په دی پړاو کی خپل باینری عدد لومړی په دریو دریو بیتو ویشو وروسته له ویشولو د هر دریو بیت معادل قیمت په باینری سیستم کی لیکو لاسته راغلی عدد د باینزی سیستم عدد دی .
+                             </p>
+                              <p class="pmain">مثال : 2  ( ? ) = 8( 765 ) </p>
+                            </b>
+                    </div>
+                    <div class="body " style="direction:ltr;">
+
+                        <b>
+                                      <p class="pmain"> ( 765 )8 = ( ? )2 &nbsp; </p>
+                                      <p class="pmain">  7  =  (111)2 &nbsp; </p>
+                                      <p class="pmain"> 6  =  (110)2 =  &nbsp; </p>
+                                      <p class="pmain"> 5  =  (101)2 &nbsp;</p>
+                                      <p class="pmain"> ( 765 ) 8  = 16  ( 111110101 )2</p>
+                                      <p class="pimg"> </p>
+                                  </b>
+                    </div>
+                </div>
+            </li>
+            <!-- /ob -->
+            <!-- oh -->
+            <li class="item" id="oh">
+                <a href="#oh" class="btn">اکټال سیستم بدلول هګزادسیمل ته  </a>
+                <div class="sme">
+                    <div class="body" style="direction:rtl;">
+                        <h3> اکتال سیستم بدلول هګزادسیمل ته : </h3>
+                        <b> <h4 class="h4main">اکتال سیستم : </h4>
+                               <p class="pmain">داکتال سیستم مبناء اته دی .په دی سیستم کی هر عدد له لاندی اتو عددونو له اوډلو څخه لاسته راځی . </p>
+                               <p class="pmain"> { ۰ ، ۱، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ } </p>
+                               <p class="pmain"> مثال : ۴۶۶ ، ۷۳۱ اعداد د اکتال سیستم بیلګی دی . </p>
+                               <h4 class="h4main"> هګزادسیمل سیستم : </h4>
+                               <p class="pmain"> د دی سیستم مبناء شپاړس دی . په دی سیستم کی هرعدد ده لاندی ارقامو او سمبولو نو له اوډلو سخه لاسته راځی .  </p>
+                               <p class="pmain"> { 1 , 2 , 3 , 4 , 5, 6 , 7 , 8 , 9 , A , B , C , D , E , F }</p>
+                               <p class="pmain"> مثال : AFE  ، ۳۳ AD اعداد ده اکتال سیستم بیلګی دی . </p>
+                               <h4 class="h4main"> اعشاری( دسیمل ) سیستم :  </h4>
+                               <p class="pmain">دسیمل سیستم یو له مهمو سیستمونو څخه دی . چی له کمپیوټری نړی نه باندی په ورځینی ژوند کی هم ور څخه ګټه اخیستل کیږی .
+                              ددی سیستم مبناء لس دی . یعنی ددی سیستم اعداد دلاندی لسو رقمونو له یوځای کیدلو څخه لاسته راځی
+                               </p>
+                               <p class="pmain"> { ۰ ، ۱ ، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ ، ۸ ، ۹} </p>
+                               <p class="pmain"> مثال  : ۲۰۰۱ ،۵۰۸۷۹ دغه اعداد د سیمل سیستم بیلګی دی . </p>
+
+                               <h4 class="h4main">   اکتال سیستم بدلول هګزادسیمل ته :</h4>
+                               <p class="pmain"> اکتال سیستم څخه هګزادسیمل سیستم ته د عد تبدیل کولو لپاره دوه  جلا لاری لرو چی هر یو یی لاندی په تفصیل سره تشریح کوو  .
+                            </p>
+
+                               <p class="pmain"> لومړی لاره : </p>
+                               <p class="pmain">په ده طریقه کی ددی لپاره چی خپل اکتال عدد په هګزادسیمل سیستم واړو نو لومړی خپل اکتال عدد په دسیمل او وروسته همداغه نوی دسیمل عدد هګزادسیمل سیستم ته اړوو.
+
+                            </p>
+                             <p class="pmain">  دوهمه لاره :   </p>
+                              <p class="pmain">  کړنلاره : خپل اکتال عدد هر رقم د هغه په معادل څلور څلور بیتونه په باینری سیستم کی لیکو او وروسته په همغه ترتیب سره  خپل ټول اکتال عدد معادل بیتونه په باینری کی لیکو وروسته چی مو باینری عدد تر لاسه کړه نو په دی پړاو کی خپل باینری عدد لومړی په څلور څلور بیتو ویشو وروسته له ویشولو د هر څلور
+                              بیت معادل قیمت په هګزادسیمل سیستم کی لیکو لاسته راغلی عدد په هګزادسیمل سیستم کی ده.  </p>
+
+                              </div>
+                          </div>
+                      </li>
+                      <!-- /oh -->
+                      <!-- hd -->
+                      <li class="item" id="hd">
+                          <a href="#hd" class="btn">هګزادسیمل سیستم بدلول دسیمل ته </a>
+                          <div class="sme">
+                            <div class="body" style="direction:rtl;">
+                               <h3> باینری سیستم بدلول دسیمل ته  :  </h3>
+                               <h4 class="h4main"> هګزادسیمل سیستم : </h4>
+                                  <p class="pmain"> د دی سیستم مبناء شپاړس دی . په دی سیستم کی هرعدد ده لاندی ارقامو او سمبولو نو له اوډلو سخه لاسته راځی .  </p>
+                                  <p class="pmain"> { 1 , 2 , 3 , 4 , 5, 6 , 7 , 8 , 9 , A , B , C , D , E , F }</p>
+                                  <p class="pmain"> مثال : AFE  ، ۳۳ AD اعداد ده اکتال سیستم بیلګی دی . </p>
+                                      <h4 class="h4main"> اعشاری( دسیمل ) سیستم :  </h4>
+                              <b><p class="pmain">دسیمل سیستم یو له مهمو سیستمونو څخه دی . چی له کمپیوټری نړی نه بهر په ورځینی ژوند کی هم ور څخه ګټه اخیستل کیږی .
+                                    ددی سیستم مبناء لس دی . یعنی ددی سیستم اعداد دلاندی لسو رقمونو له یوځای کیدلو څخه لاسته راځی
+                                  </p>
+                                  <p class="pmain"> { ۰ ، ۱ ، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ ، ۸ ، ۹} </p>
+                                  <p class="pmain"> مثال  : ۲۰۰۱ ،۵۰۸۷۹ دغه اعداد د سیمل سیستم بیلګی دی . </p>
+
+                                     <h4 class="h4main"> هګزادسیمل سیستم بدلول دسیمل ته :</h4>
+                                     <p class="pmain">ده هګزادسیمل هګزادسیمل  سیستم څخه دسیمل سیستم ته د اعدادو د تبدیل کولو لپاره د ارقامو د موقیعت ارزښت مجموعه محاسبه کوو.				<br>
+                              کړنلاره :<br>
+                              ددی لپاره چی یو عدد له هګزادسیمل سیستم څخه دسیمل سیستم ته تبدیل ګړو لومړی پړاو کی په هګزادسیمل سیستم کی راکړل شوی عدد لومړی رقم په  شپاړس کی ضرب کوو او ددغه لومړی رقم لپاره ده شپاړس توان  صفر په نظر کی نیسو او ورپسی دوهم  رقم په شپاړس کی ضرب کوو ددی رقم یعنی دوهم  رقم  لپاره ده ا شپاړس توان یو په نظر کی نیسو او همداسی په پرله پسی توکه د عدد هر ورستی رقم په اخیستلو سره د شپاړس عدد توان زیاتوو او دی عملی ته تر هغی ادامه ورکوو چی ده اکتال عدد هر رقم په شپاړس کی ضرب شی په وروستی پړاو کی ټول لاسته راغلی ارقام جمع کوو لاسته راغلی عدد ددسیمل سیستم عدد دی  .
+                                     </p>
+                                      <p class="pmain">  بیلګه :  </p>
+                                      <p class="pimg"> <img src="../img/HDEx.png" class="mainimg"></p>
+                                  </b>
+                    </div>
+                </div>
+            </li>
+            <!-- /hd -->
+            <!-- hb -->
+            <li class="item" id="hb">
+                <a href="#hb" class="btn">هګزادسیمل سیستم بدلول باینری  ته </a>
+                <div class="sme">
+                    <div class="body" style="direction:rtl;">
+                        <h3> هګزادسیمل سیستم بدلول باینری ته :</h3>
+                        <b>
+                                    <h4 class="h4main"> هګزادسیمل سیستم : </h4>
+                                    <p class="pmain"> د دی سیستم مبناء شپاړس دی . په دی سیستم کی هرعدد ده لاندی ارقامو او سمبولو نو له اوډلو سخه لاسته راځی .  </p>
+                                    <p class="pmain"> { 1 , 2 , 3 , 4 , 5, 6 , 7 , 8 , 9 , A , B , C , D , E , F }</p>
+                                    <p class="pmain"> مثال : AFE  ، ۳۳ AD اعداد ده اکتال سیستم بیلګی دی . </p>
+                                    <h4 class="h4main"> باینری سیستم : </h4>
+                                    <p class="pmain"> ددی سیستم مبناء هدو دی . په دی سیستم کی هرعدد د دو لاندی رقمونو له یوځای کیدلو څخه لاسته راځی</p>
+                                    <p class="pmain"> { ۰ ، ۱} </p>
+                                    <p class="pmain"> مثال : ۱۱۰۱ ، ۱۰۰۱۱  دغه اعداد ده باینری سیستم بیلګی دی . </p>
+
+                                    <h4 class="h4main"> اعشاری( دسیمل ) سیستم :  </h4>
+                                    <p class="pmain">دسیمل سیستم یو له مهمو سیستمونو څخه دی . چی له کمپیوټری نړی نه باندی په ورځینی ژوند کی هم ور څخه ګټه اخیستل کیږی .
+                                   ددی سیستم مبناء لس دی . یعنی ددی سیستم اعداد دلاندی لسو رقمونو له یوځای کیدلو څخه لاسته راځی
+                                    </p>
+                                    <p class="pmain"> { ۰ ، ۱ ، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ ، ۸ ، ۹} </p>
+                                    <p class="pmain"> مثال  : ۲۰۰۱ ،۵۰۸۷۹ دغه اعداد د سیمل سیستم بیلګی دی . </p>
+                                <h4 class="h4main">اکتال سیستم بدلول هګزادسیمل ته :</h4>
+                                <p class="pmain"> اکتال سیستم څخه هګزادسیمل سیستم ته د عد تبدیل کولو لپاره دوه  جلا لاری لرو چی هر یو یی لاندی په تفصیل سره تشریح کوو  .
+
+                              </p>
+                              <p class="pmain">
+                                لومړی لاره :
+                                  </p>
+                              <p class="pmain">په ده طریقه کی ددی لپاره چی خپل اکتال عدد په هګزادسیمل سیستم واړو نو لومړی خپل اکتال عدد په دسیمل او وروسته همداغه نوی دسیمل عدد هګزادسیمل سیستم ته اړوو.</p>
+                              <p class="pmain">دوهمه لاره : </p>
+                              <p class="pmain"> کړنلاره : خپل اکتال عدد هر رقم د هغه په معادل څلور څلور بیتونه په باینری سیستم کی لیکو او وروسته په همغه ترتیب سره  خپل ټول اکتال عدد معادل بیتونه په باینری کی لیکو وروسته چی مو باینری عدد تر لاسه کړه نو په دی پړاو کی خپل باینری عدد لومړی په څلور څلور بیتو ویشو وروسته له ویشولو د هر څلور
+                                بیت معادل قیمت په هګزادسیمل سیستم کی لیکو لاسته راغلی عدد په هګزادسیمل سیستم کی ده.
+                              </p>
+                              <p class="pmain">مثال : 10  ( ? ) = 2( 10111 ) </p>
+
+
+                                 </b>
+                    </div>
+                    <div class="body " style="direction:ltr;">
+
+                        <b>
+                                      <p class="pmain"> ( 4A8 )16 = ( ? )2 &nbsp;&nbsp;  </p>
+                                      <p class="pmain">  4  =  (100)2 &nbsp; = (0100)2</p>
+                                      <p class="pmain"> A  =  (10)10 =  &nbsp; (1010)2</p>
+                                      <p class="pmain"> 8  =  (1000)2 &nbsp;</p>
+                                      <p class="pmain"> ( 4A8 ) 2  = 16  ( 010010101000 )2</p>
+                                      <p class="pimg"> </p>
+                                  </b>
+                    </div>
+                </div>
+            </li>
+            <!-- /hb -->
+            <!-- ho -->
+            <li class="item" id="ho">
+                <a href="#ho" class="btn">هګزادسیمل سیستم بدلول اکټال ته </a>
+                <div class="sme">
+                    <div class="body" style="direction:rtl;">
+                        <h3>هګزادسیمل سیستم بدلول اکټال ته </h3>
+                        <b>   <h4 class="h4main"> هګزادسیمل سیستم : </h4>
+                                    <p class="pmain"> د دی سیستم مبناء شپاړس دی . په دی سیستم کی هرعدد ده لاندی ارقامو او سمبولو نو له اوډلو سخه لاسته راځی .  </p>
+                                    <p class="pmain"> { 1 , 2 , 3 , 4 , 5, 6 , 7 , 8 , 9 , A , B , C , D , E , F }</p>
+                                    <p class="pmain"> مثال : AFE  ، ۳۳ AD اعداد ده اکتال سیستم بیلګی دی . </p>
+                            <h4 class="h4main">اکتال سیستم : </h4>
+                               <p class="pmain">داکتال سیستم مبناء اته دی .په دی سیستم کی هر عدد له لاندی اتو عددونو له اوډلو څخه لاسته راځی . </p>
+                               <p class="pmain"> { ۰ ، ۱، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ } </p>
+                               <p class="pmain"> مثال : ۴۶۶ ، ۷۳۱ اعداد د اکتال سیستم بیلګی دی . </p>
+                            <h4 class="h4main"> اعشاری( دسیمل ) سیستم :  </h4>
+                               <p class="pmain">دسیمل سیستم یو له مهمو سیستمونو څخه دی . چی له کمپیوټری نړی نه باندی په ورځینی ژوند کی هم ور څخه ګټه اخیستل کیږی .
+                              ددی سیستم مبناء لس دی . یعنی ددی سیستم اعداد دلاندی لسو رقمونو له یوځای کیدلو څخه لاسته راځی
+                               </p>
+                               <p class="pmain"> { ۰ ، ۱ ، ۲ ، ۳ ، ۴ ، ۵ ، ۶ ، ۷ ، ۸ ، ۹} </p>
+                               <p class="pmain"> مثال  : ۲۰۰۱ ،۵۰۸۷۹ دغه اعداد د سیمل سیستم بیلګی دی . </p>
+                               <h4 class="h4main">هګزادسیمل سیستم بدلول اکټال ته </h4>
+                               <p class="pmain"> د هګزادسیمل څخه اکتال سیستم ته د عدد د تبدیل کواو لپاره ده لاری شتون لری . چی هر  کوم یی لاندی په تفصیل څپړو . </p>
+
+                               <p class="pmain">  لومړی لاره :</p>
+                               <p class="pmain">په دی طریقه کی لومړی خپل هګزادسیمل عدد دسیمل سیستم او وروسته له هغه اکتال ته یی اړوو ، </p>
+                             <p class="pmain">
+                            کړنلاره : لومړی هګزادسیمل  سیستم څخه دسیمل سیستم ته د اعدادو د تبدیل کولو لپاره د ارقامو د موقیعت ارزښت مجموعه محاسبه کوو
+                            ددی لپاره چی یو عدد له هګزادسیمل سیستم څخه دسیمل سیستم ته تبدیل ګړو لومړی پړاو کی په هګزادسیمل سیستم کی راکړل شوی عدد لومړی رقم په  شپاړس کی ضرب کوو او ددغه لومړی رقم لپاره ده شپاړس توان  صفر په نظر کی نیسو او ورپسی دوهم  رقم په شپاړس کی ضرب کوو ددی رقم یعنی دوهم  رقم  لپاره ده ا شپاړس توان یو په نظر کی نیسو او همداسی په پرله پسی توکه د عدد هر ورستی رقم په اخیستلو سره د شپاړس عدد توان زیاتوو او دی عملی ته تر هغی ادامه ورکوو چی ده اکتال عدد هر رقم په شپاړس کی ضرب شی په وروستی پړاو کی ټول لاسته راغلی ارقام جمع کوو لاسته راغلی عدد ددسیمل سیستم عدد دی
+                             </p>
+                              <p class="pmain">  په دریم پړاو کی خپل نوی لاسته راغلی دسیمل عدد اکتال سیستم ته په لاندی تو گه اړوو. </p>
+                                <p class="pmain"> کړنلاره : د دسیمل سیستم څخه اکتال سیستم ته د عدد ده تبدیل کولو لپاره ده پرله پسی توګه تقسیم عملیی څخه ګټه اخلو .
+                                      څرنګه چی به دی طریقه کی مقسوم علیه ۸ او مقسوم زمونږ لاسته راغلی عدد ده لسو په مبنا کی دی  شوی عدد ده لسو په مبناء کی دی کوم چی غواړی اکتال سیستم ته تبد یل کړو
+
+                            لومړی پړاو کی راکړل شوی عدد په اتو تقسیم کوو او دی عملیی ته تر هغی دوام ورکوو خارج قسمت له مقسوم علیه نه لوی وی .
+                                  په دوهم پړاو کی خپل خارج قسمت په نظر کی نیسو که چیری دا عدد یعنی خارج قسمت له مقسوم څخه لوی وی په دی صورت کی بیا هم لومړی پړاو پلی کوو یعنی خارج قسمت بیاهم په اتو تقسیم کوو
+                                  او دی عملی ته تر هغه دوام ورکوو چی خارج قسمت مو له مبناء ( ۸ ) څخه کوچنی شی .
+                                  اوس ده وروستی خارج قسمت په کډون ده مخکینیو تقسیم عملیو پاتی برخی په ترتیب له پیل نه تر پایه کیڼ نه ښی لوری ته به ترتیب یو د بل ترڅنګ د ارقامو اوډل ترسره کوو
+                                  لاسته راغلی عدد ده اکتال سیستم عدد دی .
+                              </p>
+                              <p class="pmain"> دوهمه لاره :</p>
+                                <p class="pmain">په دی طریقه کی لومړی خپل هګزادسیمل عدد باینری عدد په باینری او وروسته له هغه نوی باینری عدد په اکتال سیستم اړوو.
+                                ددی لپاره چی خپل هګزادسیمل عدد باینری عدد ته واړو نو د خپل هګزادسیمل عدد هر رقم کین نه ښی لوری ته د هغه په څلورو معادل بیتونو په باینری سیستم کی لیکو .
+                                په دویم پړاو کی نوی لاسته راغلی باینری عدد ښی نه کین لوری ته په دری دری بیتونو ویشو وروسته له ویش نه اوس له کین نه ښی لوری ته د هر دری بیت معادل په اکتال سیستم کی لیکو . لاسته راغلی عدد د اکتال په سیستم کی دی .
+                                </p>
+                            </b>
+                    </div>
+                </div>
+            </li>
+            <!-- /ho -->
+        </div>
+    </div>
+
+    </div>
+    <!-- /body -->
+    </div>
+    <!-- /continar -->
+    <!-- footer -->
+    <footer>
+        <p class="pfootar">دکاپی حق © ۲۰۲۰ </p>
+    </footer>
+    <!-- footer -->
+    <script type="text/javascript" src="../javascript/app.js">
+    </script>
+</body>
+
+</html>
